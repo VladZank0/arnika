@@ -1,10 +1,12 @@
-$breakpoint_xxl: 1200px;
-$breakpoint_xl: 1024px;
-$breakpoint_md: 767px;
-$breakpoint_sm: 564px;
-$breakpoint_xsm: 375px;
+//* БРЕЙКПОИНТЫ
 
-@mixin desctop(){
+$breakpoint_xxl: 1920px;
+$breakpoint_xl: 1400px;
+$breakpoint_md: 1100px;
+$breakpoint_sm: 700px;
+$breakpoint_xsm: 400px;
+
+@mixin desktop(){
     @media (max-width: $breakpoint_xxl) {
         @content
     }
@@ -33,35 +35,555 @@ $breakpoint_xsm: 375px;
         @content
     }
 }
+@mixin hover(){
+    @media (hover: hover){
+        @content
+    }
+} 
+
+//* ЦВЕТА
+
+// ЗОЛОТЫЕ
+$gradient: linear-gradient(95.55deg, #FFC770 2.63%, #FFF1DD 49.29%, #FFC770 97.46%);
+$gradient-hover: linear-gradient(95.55deg, #FFF1DD 2.63%, #FFC770 52.29%, #FFF1DD 97.46%);
+$gold: #DCB971;
+$mustard: #C39E32;
+$sand: #BDA37E;
+
+// СВЕТЛЫЕ
+$gray: #E7E7E7;
+$light-gray: #F7F7F7;
+$light-beige: #FCFAF7;
+$white: #FFFFFF;
+
+// ТЕМНЫЕ
+$dark: #353332;
+$brown: #6B452C;
+$gray-logo: #BDBDBD;
+
+
+$transition: .3s ease;
+
+//* ТЕКСТ
+
+.h1{
+    font-family: 'Cormorant', sans-serif;
+    font-size: 72px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 76px;
+    @include laptop(){
+        font-size: 60px;
+        line-height: 60px;
+    }
+    @include tablet(){
+        font-size: 40px;
+        line-height: 50px;
+    }
+    @include mobile(){
+        font-size: 36px;
+    }
+}
+.h2{
+    font-family: 'Cormorant', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.h3{
+    font-family: 'Cormorant', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.h4{
+    font-family: 'Cormorant', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.h5{
+    font-family: 'Cormorant', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.upper-note{
+    font-family: 'AvenirNextCyr-Demi', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.description-1{
+    font-family: 'AvenirNextCyr-Regular', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    @include tablet(){
+        font-size: 20px;
+    }
+    @include mobile(){
+        font-size: 18px;
+    }
+}
+.description-1-link{
+    font-family: 'AvenirNextCyr-Demi', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.description-1-selected{
+    font-family: 'AvenirNextCyr-Demi', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+.description-2{
+    font-family: 'AvenirNextCyr-Regular', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: $dark;
+    line-height: 30px;
+    @include laptop(){
+        font-size: 18px;
+        line-height: 27px;
+    }
+    @include tablet(){
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+.description-2-link{
+    font-family: 'AvenirNextCyr-Regular', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.description-2-selected{
+    font-family: 'AvenirNextCyr-Demi', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.description-2-uppercase{
+    font-family: 'AvenirNextCyr-Regular', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+*{
+    -webkit-tap-highlight-color: transparent;
+}
 
 body{
     padding: 0;
     margin: 0;
+    background-color: rgb(94, 87, 87);
 }
 
 .container{
-    padding: 0 16.3px;
+    max-width: 1548px;
+    padding: 0 40px;
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    @include mobile(){
+        padding: 0 16.5px;
+    }
+}
+a{
+    text-decoration: none;
 
 }
+ul,ol{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style-type: none;
+}
+button{
+    padding: 0;
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6{  
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+//? UI KIT
+// primary-button в меню
+@mixin primary-button-menu-large{
+    padding: 18px 32px;
+    font-size: 20px; 
+}
+@mixin primary-button-menu-medium{
+    padding: 18px 32px;
+    font-size: 20px; 
+}
+@mixin primary-button-menu-small{
+    padding: 15px 17.5px;
+    font-size: 14px; 
+}
 
-.logo{
-    display: block;
-    max-width: 233px;
-    max-height: 78px;
-    &__img{
-        width: 100%;
-        height: auto;
-        object-fit: contain;
+// primary-button вне меню
+@mixin primary-button-large{
+    padding: 24px 32px;
+    font-size: 20px; 
+}
+@mixin primary-button-medium{
+    padding: 24px 32px;
+    font-size: 18px; 
+}
+@mixin primary-button-small{
+    padding: 19.5px 28px;
+    font-size: 16px; 
+}
+
+// primary-buttom мобильный
+@mixin primary-button-mobile{
+    padding: 20px 28px;
+    font-size: 14px; 
+}
+//* КНОПКИ
+.primary-button{
+    position: relative;
+    box-sizing: border-box;
+    color: $dark;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    line-height: 14px;
+    z-index: 2;
+    background-color: $gradient;
+    font-family: 'AvenirNextCyr-Medium', sans-serif;
+    font-weight: 500;
+    @include primary-button-menu-large();
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-color:  $gradient-hover;
+        transition: $transition;
+        opacity: 0;
+    }
+    @include hover(){
+        &:hover::before{
+            background-color:  $gradient-hover;
+            opacity: 1;
+        }
+    }
+    @include tablet(){
+        @include primary-button-menu-medium();
+    }
+    @include mobile(){
+        @include primary-button-menu-small();
     }
 }
 
-.phonenumber{
+@mixin secondary-button-large{
+    font-size: 20px; 
+}
+@mixin secondary-button-medium{
+    font-size: 18px; 
+}
+@mixin secondary-button-small{
+    font-size: 16px; 
+}
+@mixin secondary-button-mobile{
+    font-size: 14px; 
+}
+.secondary-button{
+    position: relative;
+    background-color: $gold;
+    transition: $transition;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    color: $white;
+    padding: 24px 32px;
+    z-index: 1;
+    overflow: hidden;
+    font-family: 'AvenirNextCyr-Medium', sans-serif;
+    font-weight: 500;
+    &::before, &::after {
+        content: '';
+        background-color: $mustard;
+        position: absolute;
+        height: 0;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transition: all .23s;
+        transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    }
+    &::before{
+        background-color: rgb(214, 196, 143);
+    }
+    @include hover{
+        &:hover{
+            &::before, &::after {
+                content: '';
+                transition: all .23s;
+                height: 100%;
+                transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            }
+            &::after{
+                transition-delay: .23s;
+            }
+        }
+    }
+}
+.tertiary-button{
+    position: relative;
+    overflow: hidden;
     display: flex;
-    column-gap: 12px;
     align-items: center;
+    padding: 16px 20px;
+    column-gap: 10px;
+    box-sizing: border-box;
+    border: 1px solid $brown;
+    color: $brown;
+    font-family: 'AvenirNextCyr-Medium', sans-serif;
+    font-weight: 500;
+    border-radius: 100px;
+    z-index: 2;
+    background-color: transparent;
+    cursor: pointer;
     &__icon{
         display: inline-flex;
     }
+    &::before, &::after {
+        content: '';
+        background-color: $gold;
+        position: absolute;
+        height: 0;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transition: all .23s;
+        transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    }
+    &::before{
+        background-color: rgb(229, 214, 169);
+    }
+    @include hover{
+        &:hover{
+            .tertiary-button__icon{
+                svg path{
+                    stroke: white;
+                }
+            }
+            color: $white;
+            border: 1px solid $gold;
+            &::before, &::after {
+                content: '';
+                transition: all .23s;
+                height: 100%;
+                transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            }
+            &::after{
+                transition-delay: .23s;
+            }
+        }
+    }
+
+    &_download{
+        flex-direction: row-reverse;
+        border: none;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: $brown;
+            bottom: -1px;
+            background: none;
+        }
+        &::before{
+            content: none;
+        }
+
+    }
+}
+.arrow-button{
+    @include hover(){
+        &:hover{
+            cursor: pointer;
+            .arrow-button__circle{
+                stroke: $sand;
+                stroke-dashoffset: 60;
+                transition: stroke-dashoffset .3s linear;
+                transform-origin: 50% 50%;
+            }
+        }
+    }
+    @include laptop(){
+        svg{
+            width: 64px;
+            height: 64px;
+        }
+    }
+    &__circle{
+        transform-origin: 50% 50%;
+        stroke-dasharray:  248.41;
+        stroke-dashoffset:  308.41;
+        transition: stroke-dashoffset .3s; 
+        transition-timing-function: cubic-bezier(.25,.74,.22,.99);
+    }
+}
+.swiper-button-disabled{
+    opacity: .5; 
+}
+.swiper-pagination{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+.swiper-pagination-bullet{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $brown;
+    transition: .2s;
+    &-active{
+        width: 14px;
+        height: 14px;
+        background-color: $gold;
+        transition: .2s;
+    }
+}
+.card-button{
+    display: flex;
+    align-items: center;
+    padding: 24px 32px;
+    border: 1px solid $gray;
+    background-color: $white;
+    &_menu{
+        max-width: 344px;
+        width: 100%;
+    }
+    &-icon{
+
+    }
+    &__title{
+        width: 100%;
+    }
+    &__arrow{
+
+    }
+}
+.menu-card{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    border: 1px solid $gray;
+    background-color: $white;
+    max-width: 344px;
+    width: 100%;
+    min-width: 300px;
+    border-radius: 12px;
+    transition: $transition;
+    &_link-to-all{
+        flex-direction: row-reverse;
+        text-align: left;
+        padding: 16px 20px;
+    }
+    @include tablet(){
+        max-width: 344px;
+    }
+    @include mobile(){
+        width: 100%;
+        max-width: unset;
+    }
+    &:hover{
+        background-color: $light-beige;
+        cursor: pointer;
+        transition: $transition;
+    }
+    &__title{
+        font-family: 'AvenirNextCyr-Medium', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: $brown;
+        white-space: wrap;
+        width: 100%;
+    }
+    &__icon{
+        max-width: 48px;
+    }
     
 }
+.contact-element{
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+    white-space: nowrap;
+    &__text{
+        font-family: 'AvenirNextCyr-Medium', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: $dark;
+        @media (max-width: 800px){
+            &_tel-mobile{
+                display: none;
+            }
+        }
+    }
+    &__icon{
+        display: inline-flex;
+    }
+    &_address{
+        @include tablet(){
+            display: none;
+        }
+    }
+    &_address-mobile{
+        width: 275px;
+        flex-grow: 1;
+        white-space: wrap;
+    }
+}
+.search-bar{
+    position: relative;
+   
+    &__input{
+        border-radius: 100px;
+        border: 1px solid $gray;
+        background-color: $white;
+        box-sizing: border-box;
+        padding: 11.5px 57px 11.5px 20px;
+        width: 100%;
+        &:focus{
+            outline:  1px solid $gold;
+        }
+        @include hover(){
+            &:hover{
+                outline: 1px solid $gold;
+            }
+        }
+       
+    }
+    &__button{
+        position: absolute;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background: transparent;
+    }
+}
+
+
+@import "../scss/components/main-page/header";
+@import "../scss/components/main-page/hero";
+@import "../scss/components/main-page/directions";

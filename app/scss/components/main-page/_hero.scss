@@ -1,0 +1,246 @@
+.hero{
+    background-color: $light-beige;
+    .swiper{
+        transition: 1s;
+    }
+    .swiper-slide{
+        opacity: 0;
+        transition: 1s;
+        &-active{
+            opacity: 1;
+            transition: 1s;
+        }
+    }
+    @include mobile(){
+        .arrow-button{
+            svg{
+                height: 48px;
+            }
+        }
+    }
+    &__slider{
+        overflow: hidden;
+        &-wrapper{
+            display: flex;
+        }
+        &-counter{
+            color: black;
+            bottom: 106.5px;
+            font-size: 18px;
+            color: $dark;
+            &-current{
+                font-family: 'AvenirNextCyr-Bold', sans-serif;
+                font-weight: bold;
+            }
+            &-total{
+                font-family: 'AvenirNextCyr-Regular', sans-serif;
+                font-weight: 400;
+            }
+        }
+        &-pagination-box{
+            position: absolute;
+            bottom: 5%;
+            width: 100%;
+            &-inner{
+                display: flex;
+                justify-content: space-between; 
+            }
+            &-left{
+                display: flex;
+                flex-direction: row;
+                column-gap: 32px;
+                align-items: center;
+                @include mobile(){
+                    column-gap: 20px;
+                }
+            }
+            .swiper-pagination{
+                margin-right: -30px;
+                @include tablet(){
+                    margin-right: 0;
+                }
+                @include mobile(){
+                    display: none;
+                }
+            }
+        }
+    }
+    &__slide{
+        display: flex;
+        align-items: flex-start;
+        height: calc(100vh - 148px);
+        box-sizing: border-box;
+        min-width: 100%;
+        position: relative;
+        overflow: hidden;
+        @include tablet(){
+            height: calc(100vh - 112px);
+        }
+        @include mobile(){
+            height: calc(100vh - 72px);
+        }
+        &-container{
+            position: relative;
+            max-width: 1548px;
+            padding: 0 40px;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            height: 100%;
+            @include mobile(){
+                padding: 0 16px;
+            }
+        }
+        &-content{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 40px;
+            z-index: 3;
+            row-gap: 32px;
+            max-width: 735px;
+            top: 15%;
+            @include laptop(){
+                max-width: 604px;
+            }
+            @include tablet(){
+                max-width: 354px;
+            }
+            @include mobile(){
+                top: 40px;
+                left: 16px;
+                right: 16px;
+                row-gap: 20px;
+            }
+            &::after{
+                @include mobile(){
+                    display: none;
+                }
+            }
+            &_line-1{
+                &::after{
+                    content: "";
+                    position: absolute;
+                    background: url(/images/hero/btn-line-1.webp);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 1100px;
+                    bottom: -50%;
+                    left: -30%;
+                    height: 500px;
+                    object-fit: contain;
+                    z-index: -1;
+                    @include tablet(){
+                        width: 200%;
+                        height: 100%;
+                    }
+                }
+            }
+            &_line-2{
+                &::after{
+                    content: url('/images/hero/btn-line-2.webp');
+                    position: absolute;
+                    left: -30%;
+                    bottom: 2%;  
+                    z-index: -1;
+                    width: 100%;
+                    height: auto;
+                    
+                }
+            }
+            &_line-3{
+                &::after{
+                    content: url('/images/hero/btn-line-3.webp');
+                    position: absolute;
+                    left: 15%;
+                    bottom: 8%;
+                    z-index: -1;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &_line-4{
+                &::after{
+                    content: url('/images/hero/btn-line-4.webp');
+                    position: absolute;
+                    left: 20%;
+                    bottom: -67%;
+                    z-index: -1;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &_line-5{
+                &::after{
+                    content: url('/images/hero/btn-line-5.webp');
+                    position: absolute;
+                    left: 4%;
+                    bottom: -65%;
+                    z-index: -1;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    &__text{
+        max-width: 620px;
+    }
+    &__img{
+            height: 100%;   
+            width: 100%;
+            @include laptop(){
+                transform: translateX(20%);
+            }
+            @include mobile(){
+                transform: translateX(0);
+            }
+        &-wrapper{
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            z-index: 1;
+            @include mobile(){
+                transform: translateY(10px);
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                left: -30%;
+                top: 0;
+                width: 70%;
+                height: 100%;
+                z-index: 2;
+                background: linear-gradient(90deg, #FCFAF7 49.18%, rgba(252, 250, 247, 0) 69.03%);
+                @include laptop(){
+                    left: 0%;
+                }
+            }
+            @include mobile(){
+                transform: translateX(0);
+                width: 100%;
+                height: auto;
+                bottom: 0;
+                top: unset;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    transform: rotate(80deg);
+                    top: -55%;
+                    width: 100%;
+                    height: 110vw;
+                    z-index: 2;
+                    background: linear-gradient(90deg, #FCFAF7 49.18%, rgba(252, 250, 247, 0) 69.03%);
+                }
+            }
+        }
+    }
+    &__button{
+        width: fit-content;
+        position: relative;
+        
+    }
+}

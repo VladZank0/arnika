@@ -4,45 +4,1040 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="./css/lib/accordion/accordion.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <header class="header">
+        <div class="main-menu-background"></div>
+        <div class="main-menu-page-background"></div>
         <div class="container">
             <div class="header__inner">
-                <div class="header__top">
-                    <a class="logo" href="">
-
+                <a class="logo logo_desktop" href="" aria-label="Логотип">
+                    <picture>
+                        <source srcset="./images/main-page/logo.png" (max-width: 1920px)>
+                        <source srcset="./images/main-page/logo_mobile.png" (min-width: 577px)>
                         <img class="logo__img" width="" height="" src="./images/main-page/logo.png" alt="">
-                    </a>
-                    <a href="tel:2345555" class="phonenumber">
-                        <span class="phonenumber__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.9975 16.9201V19.9201C21.9986 20.1986 21.9416 20.4743 21.83 20.7294C21.7184 20.9846 21.5548 21.2137 21.3496 21.402C21.1443 21.5902 20.9021 21.7336 20.6382 21.8228C20.3744 21.912 20.0949 21.9452 19.8175 21.9201C16.7403 21.5857 13.7845 20.5342 11.1875 18.8501C8.77132 17.3148 6.72283 15.2663 5.18749 12.8501C3.49747 10.2413 2.44573 7.27109 2.11749 4.1801C2.0925 3.90356 2.12537 3.62486 2.21399 3.36172C2.30262 3.09859 2.44506 2.85679 2.63226 2.65172C2.81945 2.44665 3.0473 2.28281 3.30128 2.17062C3.55527 2.05843 3.82983 2.00036 4.10749 2.0001H7.10749C7.5928 1.99532 8.06328 2.16718 8.43125 2.48363C8.79922 2.80008 9.03957 3.23954 9.10749 3.7201C9.23411 4.68016 9.46894 5.62282 9.80749 6.5301C9.94204 6.88802 9.97115 7.27701 9.8914 7.65098C9.81164 8.02494 9.62635 8.36821 9.35749 8.6401L8.08749 9.9101C9.51105 12.4136 11.5839 14.4865 14.0875 15.9101L15.3575 14.6401C15.6294 14.3712 15.9726 14.1859 16.3466 14.1062C16.7206 14.0264 17.1096 14.0556 17.4675 14.1901C18.3748 14.5286 19.3174 14.7635 20.2775 14.8901C20.7633 14.9586 21.2069 15.2033 21.524 15.5776C21.8412 15.9519 22.0097 16.4297 21.9975 16.9201Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>    
-                        </span>
-                        <span class="phonenumber__text">234 -55-55</span>
-                    </a>
-                    <div class="address">
-                        <span class="address__icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>     
-                        </span>
-                        <span class="address__text">Красноярск, ул. Красная площадь, 9А</span>
+                    </picture>
+                </a>
+                <div class="header__main">
+                    <div class="header__top">
+                        <a class="logo" href="" aria-label="Логотип">
+                            <picture>
+                                <source srcset="./images/main-page/logo.webp" media="(min-width: 701px)">
+                                <source srcset="./images/main-page/logo_mobile.webp" media="(max-width: 700px)">
+                                <img class="logo__img" width="" height="" src="./images/main-page/logo.webp" alt="">
+                            </picture>
+                        </a>
+                        <div class="header__top-box">
+                            <div class="header__contact">
+                                <a href="tel:2345555" class="contact-element">
+                                    <span class="contact-element__icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.9975 16.9201V19.9201C21.9986 20.1986 21.9416 20.4743 21.83 20.7294C21.7184 20.9846 21.5548 21.2137 21.3496 21.402C21.1443 21.5902 20.9021 21.7336 20.6382 21.8228C20.3744 21.912 20.0949 21.9452 19.8175 21.9201C16.7403 21.5857 13.7845 20.5342 11.1875 18.8501C8.77132 17.3148 6.72283 15.2663 5.18749 12.8501C3.49747 10.2413 2.44573 7.27109 2.11749 4.1801C2.0925 3.90356 2.12537 3.62486 2.21399 3.36172C2.30262 3.09859 2.44506 2.85679 2.63226 2.65172C2.81945 2.44665 3.0473 2.28281 3.30128 2.17062C3.55527 2.05843 3.82983 2.00036 4.10749 2.0001H7.10749C7.5928 1.99532 8.06328 2.16718 8.43125 2.48363C8.79922 2.80008 9.03957 3.23954 9.10749 3.7201C9.23411 4.68016 9.46894 5.62282 9.80749 6.5301C9.94204 6.88802 9.97115 7.27701 9.8914 7.65098C9.81164 8.02494 9.62635 8.36821 9.35749 8.6401L8.08749 9.9101C9.51105 12.4136 11.5839 14.4865 14.0875 15.9101L15.3575 14.6401C15.6294 14.3712 15.9726 14.1859 16.3466 14.1062C16.7206 14.0264 17.1096 14.0556 17.4675 14.1901C18.3748 14.5286 19.3174 14.7635 20.2775 14.8901C20.7633 14.9586 21.2069 15.2033 21.524 15.5776C21.8412 15.9519 22.0097 16.4297 21.9975 16.9201Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>    
+                                    </span>
+                                    <span class="contact-element__text contact-element__text_tel-mobile">234-55-55</span>
+                                </a>
+                                <div class="contact-element contact-element_address">
+                                    <span class="contact-element__icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>     
+                                    </span>
+                                    <span class="contact-element__text">Красноярск, ул. Красная площадь, 9А</span>
+                                </div>
+                            </div>
+                            <div class="header__top-buttons">
+                                <a href="" class="header-main-button">
+                                    <span class="header-main-button__icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18" cy="18" r="17.5" stroke="#E7E7E7"></circle>
+                                            <circle class="header-main-button__icon-progress-circle" cx="18" cy="18" r="17.5" stroke="#BDA37E"/>
+                                            <path d="M26 27V25C26 23.9391 25.5786 22.9217 24.8284 22.1716C24.0783 21.4214 23.0609 21 22 21H14C12.9391 21 11.9217 21.4214 11.1716 22.1716C10.4214 22.9217 10 23.9391 10 25V27" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M18 17C20.2091 17 22 15.2091 22 13C22 10.7909 20.2091 9 18 9C15.7909 9 14 10.7909 14 13C14 15.2091 15.7909 17 18 17Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>    
+                                    </span>
+                                    <span class="header-main-button__text header-main-button__text_account">Личный кабинет</span>
+                                </a>
+                                <button class="header-main-button header-main-button_eye-issue">
+                                    <span class="header-main-button__icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18" cy="18" r="17.5" stroke="#E7E7E7"></circle>
+                                            <circle class="header-main-button__icon-progress-circle" cx="18" cy="18" r="17.5" stroke="#BDA37E"/>
+                                            <path d="M7 18C7 18 11 10 18 10C25 10 29 18 29 18C29 18 25 26 18 26C11 26 7 18 7 18Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M18 21C19.6569 21 21 19.6569 21 18C21 16.3431 19.6569 15 18 15C16.3431 15 15 16.3431 15 18C15 19.6569 16.3431 21 18 21Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>     
+                                    </span>
+                                    <span class="header-main-button__text header-main-button__text_eye-issue">Версия для слабовидящих</span>
+                                </button>
+                            </div>
+                            <button class="primary-button header__primary-button header__primary-button_mobile">Записаться</button>
+                        </div>
+                        <div class="burger-btn">
+                            <div class="burger-btn__line"></div>
+                            <div class="burger-btn__line"></div>
+                            <div class="burger-btn__line"></div>
+                        </div>
                     </div>
-                    
+                    <div class="header__bottom">
+                        <nav class="main-menu header__nav burger-menu">
+                            <ul class="main-menu__list">
+                                <li class="main-menu__list-item">
+                                    <button data-text="О клинике" class="main-menu__item main-menu__dropdown-button">
+                                        О клинике
+                                        <span class="main-menu__dropdown-button-icon">
+                                            <svg width="10" height="10" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1L4 4L7 1" stroke="#353332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>    
+                                        </span>
+                                    </button>
+                                    <div class="main-menu__dropdown-submenu">
+                                        <div class="main-menu__dropdown-submenu-container">
+                                            <ul class="main-menu__dropdown-submenu-list"> 
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">О клинике «Арника»</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Отзывы пациентов</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Служба заботы и контроля качества</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Служба заботы и контроля качества</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Служба заботы и контроля качества</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Новости клиники</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Лицензии клиники</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Карьера в клинике</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Партнеры</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-menu__list-item main-menu__list-item_not-relative">
+                                    <button data-text="Услуги" class="main-menu__item main-menu__dropdown-button">
+                                        Услуги
+                                        <span class="main-menu__dropdown-button-icon">
+                                            <svg width="10" height="10" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1L4 4L7 1" stroke="#353332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>   
+                                        </span>
+                                    </button>
+                                    <div class="main-menu__dropdown-submenu">
+                                        <div class="main-menu__dropdown-submenu-container">
+                                            <div class="main-menu__dropdown-submenu-inner main-menu__dropdown-submenu-inner_tab-system">
+                                                <div class="main-menu__dropdown-submenu-tabs">
+                                                    <button data-content="#mega-box-content-1" class="main-menu__dropdown-submenu-tab main-menu__dropdown-submenu-tab_active upper-note">
+                                                        Направления клиники
+                                                        <span class="main-menu__dropdown-submenu-tab-icon">
+                                                            <svg width="10" height="10" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1 1L4 4L7 1" stroke="#353332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>   
+                                                        </span>
+                                                    </button>
+                                                    <button data-content="#mega-box-content-2" class="main-menu__dropdown-submenu-tab upper-note">
+                                                        Услуги клиники
+                                                        <span class="main-menu__dropdown-submenu-tab-icon">
+                                                            <svg width="10" height="10" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1 1L4 4L7 1" stroke="#353332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>   
+                                                        </span>
+                                                    </button>
+                                                    <button data-content="#mega-box-content-3" class="main-menu__dropdown-submenu-tab upper-note">
+                                                        Комплексные программы
+                                                        <span class="main-menu__dropdown-submenu-tab-icon">
+                                                            <svg width="10" height="10" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1 1L4 4L7 1" stroke="#353332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>   
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <div class="main-menu__dropdown-submenu-contents">
+                                                    <div id="mega-box-content-1" class="main-menu__dropdown-submenu-content main-menu__dropdown-submenu-content_active">
+                                                        <ul class="main-menu__dropdown-submenu-list main-menu__dropdown-submenu-list_mega-box"> 
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/matka.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Акушерство и гинекология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/pregnancy.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Ведение беременности</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/girl.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Здоровье девочки</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/andrology.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Андрология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/urology.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Урология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/neurology.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Неврология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/endocrinology.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Эндокринология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/hemostasis.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Гематология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/therapy.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Терапия</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/allergies.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Дерматовенерология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/cardiology.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Кардиология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/cancer.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Онкология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/mammology.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Маммология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/surgery.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Хирургия</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/ultrasound2.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Ультразвуковая диагностика (УЗИ)</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/hiv.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Иммунология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card menu-card_link-to-all">
+                                                                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <circle cx="32" cy="32" r="31.5" transform="matrix(-1 0 0 1 64 0)" fill="white" stroke="#E7E7E7"/>
+                                                                        <path d="M43.5504 32.3536C43.7457 32.1583 43.7457 31.8417 43.5504 31.6464L40.3685 28.4645C40.1732 28.2692 39.8566 28.2692 39.6613 28.4645C39.4661 28.6597 39.4661 28.9763 39.6613 29.1716L42.4898 32L39.6613 34.8284C39.4661 35.0237 39.4661 35.3403 39.6613 35.5355C39.8566 35.7308 40.1732 35.7308 40.3685 35.5355L43.5504 32.3536ZM20.7969 32.5H43.1969V31.5H20.7969V32.5Z" fill="#6B452C"/>
+                                                                    </svg>                                                                        
+                                                                    <h5 class="menu-card__title">Все направления</h5>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div id="mega-box-content-2" class="main-menu__dropdown-submenu-content">
+                                                        <ul class="main-menu__dropdown-submenu-list main-menu__dropdown-submenu-list_mega-box"> 
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/gynecology.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Лечение бесплодия</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/aestetic.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Эстетическая гинекология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/surgery.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Удаление новообразований</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/micro.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Анализы</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/dropper.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Капельницы</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/day.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Дневной стационар</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/ambulance.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Вызов врача на дом</h5>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div id="mega-box-content-3" class="main-menu__dropdown-submenu-content">
+                                                        <ul class="main-menu__dropdown-submenu-list main-menu__dropdown-submenu-list_mega-box"> 
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/matka.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Акушерство и гинекология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/andrology.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Андрология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/urology.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Урология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card">
+                                                                    <img src="./images/services-icons/cardiology.svg" class="menu-card__icon">
+                                                                    <h5 class="menu-card__title">Кардиология</h5>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="" class="menu-card menu-card_link-to-all">
+                                                                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <circle cx="32" cy="32" r="31.5" transform="matrix(-1 0 0 1 64 0)" fill="white" stroke="#E7E7E7"/>
+                                                                        <path d="M43.5504 32.3536C43.7457 32.1583 43.7457 31.8417 43.5504 31.6464L40.3685 28.4645C40.1732 28.2692 39.8566 28.2692 39.6613 28.4645C39.4661 28.6597 39.4661 28.9763 39.6613 29.1716L42.4898 32L39.6613 34.8284C39.4661 35.0237 39.4661 35.3403 39.6613 35.5355C39.8566 35.7308 40.1732 35.7308 40.3685 35.5355L43.5504 32.3536ZM20.7969 32.5H43.1969V31.5H20.7969V32.5Z" fill="#6B452C"/>
+                                                                    </svg>                                                                        
+                                                                    <h5 class="menu-card__title">Все программы</h5>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="main-menu__dropdown-submenu-inner main-menu__dropdown-submenu-inner_mobile">
+                                                <button class="main-menu__dropdown-submenu-mobile-button upper-note">
+                                                    Направления клиники
+                                                    <span class="main-menu__dropdown-submenu-mobile-button-icon">
+                                                        <svg width="10" height="10" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 1L4 4L7 1" stroke="#353332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>   
+                                                    </span>
+                                                </button>
+                                                <ul class="main-menu__dropdown-submenu-list main-menu__dropdown-submenu-list_mega-box"> 
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/matka.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Акушерство и гинекология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/pregnancy.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Ведение беременности</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/girl.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Здоровье девочки</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/andrology.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Андрология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/urology.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Урология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/neurology.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Неврология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/endocrinology.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Эндокринология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/hemostasis.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Гематология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/therapy.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Терапия</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/allergies.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Дерматовенерология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/cardiology.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Кардиология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/cancer.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Онкология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/mammology.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Маммология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/surgery.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Хирургия</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/ultrasound2.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Ультразвуковая диагностика (УЗИ)</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/hiv.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Иммунология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card menu-card_link-to-all">
+                                                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="32" cy="32" r="31.5" transform="matrix(-1 0 0 1 64 0)" fill="white" stroke="#E7E7E7"/>
+                                                                <path d="M43.5504 32.3536C43.7457 32.1583 43.7457 31.8417 43.5504 31.6464L40.3685 28.4645C40.1732 28.2692 39.8566 28.2692 39.6613 28.4645C39.4661 28.6597 39.4661 28.9763 39.6613 29.1716L42.4898 32L39.6613 34.8284C39.4661 35.0237 39.4661 35.3403 39.6613 35.5355C39.8566 35.7308 40.1732 35.7308 40.3685 35.5355L43.5504 32.3536ZM20.7969 32.5H43.1969V31.5H20.7969V32.5Z" fill="#6B452C"/>
+                                                            </svg>                                                                        
+                                                            <h5 class="menu-card__title">Все направления</h5>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <button class="main-menu__dropdown-submenu-mobile-button upper-note">
+                                                    Услуги клиники
+                                                    <span class="main-menu__dropdown-submenu-mobile-button-icon">
+                                                        <svg width="10" height="10" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 1L4 4L7 1" stroke="#353332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>   
+                                                    </span>
+                                                </button>
+                                                <ul class="main-menu__dropdown-submenu-list main-menu__dropdown-submenu-list_mega-box"> 
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/gynecology.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Лечение бесплодия</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/aestetic.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Эстетическая гинекология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/surgery.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Удаление новообразований</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/micro.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Анализы</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/dropper.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Капельницы</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/day.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Дневной стационар</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/ambulance.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Вызов врача на дом</h5>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <button class="main-menu__dropdown-submenu-mobile-button upper-note">
+                                                    Комплексные программы
+                                                    <span class="main-menu__dropdown-submenu-mobile-button-icon">
+                                                        <svg width="10" height="10" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 1L4 4L7 1" stroke="#353332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>   
+                                                    </span>
+                                                </button>
+                                                <ul class="main-menu__dropdown-submenu-list main-menu__dropdown-submenu-list_mega-box"> 
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/matka.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Акушерство и гинекология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/andrology.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Андрология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/urology.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Урология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card">
+                                                            <img src="./images/services-icons/cardiology.svg" class="menu-card__icon">
+                                                            <h5 class="menu-card__title">Кардиология</h5>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu-card menu-card_link-to-all">
+                                                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="32" cy="32" r="31.5" transform="matrix(-1 0 0 1 64 0)" fill="white" stroke="#E7E7E7"/>
+                                                                <path d="M43.5504 32.3536C43.7457 32.1583 43.7457 31.8417 43.5504 31.6464L40.3685 28.4645C40.1732 28.2692 39.8566 28.2692 39.6613 28.4645C39.4661 28.6597 39.4661 28.9763 39.6613 29.1716L42.4898 32L39.6613 34.8284C39.4661 35.0237 39.4661 35.3403 39.6613 35.5355C39.8566 35.7308 40.1732 35.7308 40.3685 35.5355L43.5504 32.3536ZM20.7969 32.5H43.1969V31.5H20.7969V32.5Z" fill="#6B452C"/>
+                                                            </svg>                                                                        
+                                                            <h5 class="menu-card__title">Все программы</h5>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-menu__list-item main-menu__list-item_not-relative">
+                                    <button data-text="Диагностика" class="main-menu__item main-menu__dropdown-button">
+                                        Диагностика
+                                        <span class="main-menu__dropdown-button-icon">
+                                            <svg width="10" height="10" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1L4 4L7 1" stroke="#353332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>    
+                                        </span>
+                                    </button>
+                                    <div class="main-menu__dropdown-submenu">
+                                        <div class="main-menu__dropdown-submenu-container">
+                                            <ul class="main-menu__dropdown-submenu-list main-menu__dropdown-submenu-list_default-box"> 
+                                               <li>
+                                                    <a href="" class="menu-card">
+                                                        <img src="./images/services-icons/ultrasound2.svg" class="menu-card__icon">
+                                                        <h5 class="menu-card__title">Ультразвуковая диагностика (УЗИ)</h5>
+                                                    </a>
+                                               </li>
+                                               <li>
+                                                    <a href="" class="menu-card">
+                                                        <img src="./images/services-icons/micro.svg" class="menu-card__icon">
+                                                        <h5 class="menu-card__title">Анализы</h5>
+                                                    </a>
+                                               </li>
+                                               <li>
+                                                    <a href="" class="menu-card">
+                                                        <img src="./images/services-icons/pregnancy.svg" class="menu-card__icon">
+                                                        <h5 class="menu-card__title">Кольпоскопия</h5>
+                                                    </a>
+                                               </li>
+                                               <li>
+                                                    <a href="" class="menu-card">
+                                                        <img src="./images/services-icons/andrology.svg" class="menu-card__icon">
+                                                        <h5 class="menu-card__title">Гистероскопия</h5>
+                                                    </a>
+                                               </li>
+                                               <li>
+                                                    <a href="" class="menu-card">
+                                                        <img src="./images/services-icons/andrology.svg" class="menu-card__icon">
+                                                        <h5 class="menu-card__title">Пайпель-биопсия эндометрия</h5>
+                                                    </a>
+                                               </li>
+                                               <li>
+                                                    <a href="" class="menu-card">
+                                                        <img src="./images/services-icons/cardiology.svg" class="menu-card__icon">
+                                                        <h5 class="menu-card__title">ЭКГ</h5>
+                                                    </a>
+                                               </li>
+                                               <li>
+                                                    <a href="" class="menu-card">
+                                                        <img src="./images/services-icons/ultrasound.svg" class="menu-card__icon">
+                                                        <h5 class="menu-card__title">УЗИ сердца (ЭХОКГ)</h5>
+                                                    </a>
+                                               </li>
+                                               <li>
+                                                    <a href="" class="menu-card">
+                                                        <img src="./images/services-icons/smad.svg" class="menu-card__icon">
+                                                        <h5 class="menu-card__title">СМАД</h5>
+                                                    </a>
+                                               </li>
+                                               <li>
+                                                    <a href="" class="menu-card">
+                                                        <img src="./images/services-icons/holter.svg" class="menu-card__icon">
+                                                        <h5 class="menu-card__title">Холтер</h5>
+                                                    </a>
+                                               </li>
+                                               <li>
+                                                    <a href="" class="menu-card">
+                                                        <img src="./images/services-icons/gynecology.svg" class="menu-card__icon">
+                                                        <h5 class="menu-card__title">КТГ</h5>
+                                                    </a>
+                                               </li>
+                                               <li>
+                                                    <a href="" class="menu-card menu-card_link-to-all">
+                                                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <circle cx="32" cy="32" r="31.5" transform="matrix(-1 0 0 1 64 0)" fill="white" stroke="#E7E7E7"/>
+                                                            <path d="M43.5504 32.3536C43.7457 32.1583 43.7457 31.8417 43.5504 31.6464L40.3685 28.4645C40.1732 28.2692 39.8566 28.2692 39.6613 28.4645C39.4661 28.6597 39.4661 28.9763 39.6613 29.1716L42.4898 32L39.6613 34.8284C39.4661 35.0237 39.4661 35.3403 39.6613 35.5355C39.8566 35.7308 40.1732 35.7308 40.3685 35.5355L43.5504 32.3536ZM20.7969 32.5H43.1969V31.5H20.7969V32.5Z" fill="#6B452C"/>
+                                                        </svg>                                                                        
+                                                        <h5 class="menu-card__title">Подготовка к исследованиям</h5>
+                                                    </a>
+                                               </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-menu__list-item">
+                                    <a class="main-menu__item" href="">
+                                        Врачи
+                                    </a>
+                                </li>
+                                <li class="main-menu__list-item">
+                                    <a class="main-menu__item" href="">
+                                        Прайс
+                                    </a>
+                                </li>
+                                <li class="main-menu__list-item main-menu__list-item_not-relative">
+                                    <button data-text="О клинике" class="main-menu__item main-menu__dropdown-button">
+                                        Пациентам
+                                        <span class="main-menu__dropdown-button-icon">
+                                            <svg width="10" height="10" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1L4 4L7 1" stroke="#353332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>    
+                                        </span>
+                                    </button>
+                                    <div class="main-menu__dropdown-submenu">
+                                        <div class="main-menu__dropdown-submenu-container">
+                                            <ul class="main-menu__dropdown-submenu-list main-menu__dropdown-submenu-list_double"> 
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Запись на прием</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Программа лояльности</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Блог о здоровье</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Подготовка к исследованиям</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Важная информация</a>
+                                                </li>
+                                                <li>
+                                                     <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Лечение по ОМС</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Лечение по ДМС</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Оформление справок в налоговые органы</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Выдача больничных листов</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Обработка персональных данных</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Политика конфиденциальности</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Вопросы и ответы</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Официальная информация</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="description-2 main-menu__dropdown-submenu-list-item">Нормативно-правовые документы</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-menu__list-item">
+                                    <a class="main-menu__item" href="">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="main-menu__mobile-buttons">
+                                <a href="" class="header-main-button header-main-button_account-mobile">
+                                    <span class="header-main-button__icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18" cy="18" r="17.5" stroke="#E7E7E7"></circle>
+                                            <circle class="header-main-button__icon-progress-circle" cx="18" cy="18" r="17.5" stroke="#BDA37E"/>
+                                            <path d="M26 27V25C26 23.9391 25.5786 22.9217 24.8284 22.1716C24.0783 21.4214 23.0609 21 22 21H14C12.9391 21 11.9217 21.4214 11.1716 22.1716C10.4214 22.9217 10 23.9391 10 25V27" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M18 17C20.2091 17 22 15.2091 22 13C22 10.7909 20.2091 9 18 9C15.7909 9 14 10.7909 14 13C14 15.2091 15.7909 17 18 17Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>    
+                                    </span>
+                                    <span class="header-main-button__text">Личный кабинет</span>
+                                </a>
+                                <button class="header-main-button header-main-button_eye-issue-mobile">
+                                    <span class="header-main-button__icon">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="18" cy="18" r="17.5" stroke="#E7E7E7"></circle>
+                                            <circle class="header-main-button__icon-progress-circle" cx="18" cy="18" r="17.5" stroke="#BDA37E"/>
+                                            <path d="M7 18C7 18 11 10 18 10C25 10 29 18 29 18C29 18 25 26 18 26C11 26 7 18 7 18Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M18 21C19.6569 21 21 19.6569 21 18C21 16.3431 19.6569 15 18 15C16.3431 15 15 16.3431 15 18C15 19.6569 16.3431 21 18 21Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>     
+                                    </span>
+                                    <span class="header-main-button__text">Версия для слабовидящих</span>
+                                </button>
+                            </div>
+                           
+                            <div class="main-menu__mobile-footer">
+                                <div class="main-menu__mobile-footer-top">
+                                    <a href="tel:2345555" class="contact-element">
+                                        <span class="contact-element__icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21.9975 16.9201V19.9201C21.9986 20.1986 21.9416 20.4743 21.83 20.7294C21.7184 20.9846 21.5548 21.2137 21.3496 21.402C21.1443 21.5902 20.9021 21.7336 20.6382 21.8228C20.3744 21.912 20.0949 21.9452 19.8175 21.9201C16.7403 21.5857 13.7845 20.5342 11.1875 18.8501C8.77132 17.3148 6.72283 15.2663 5.18749 12.8501C3.49747 10.2413 2.44573 7.27109 2.11749 4.1801C2.0925 3.90356 2.12537 3.62486 2.21399 3.36172C2.30262 3.09859 2.44506 2.85679 2.63226 2.65172C2.81945 2.44665 3.0473 2.28281 3.30128 2.17062C3.55527 2.05843 3.82983 2.00036 4.10749 2.0001H7.10749C7.5928 1.99532 8.06328 2.16718 8.43125 2.48363C8.79922 2.80008 9.03957 3.23954 9.10749 3.7201C9.23411 4.68016 9.46894 5.62282 9.80749 6.5301C9.94204 6.88802 9.97115 7.27701 9.8914 7.65098C9.81164 8.02494 9.62635 8.36821 9.35749 8.6401L8.08749 9.9101C9.51105 12.4136 11.5839 14.4865 14.0875 15.9101L15.3575 14.6401C15.6294 14.3712 15.9726 14.1859 16.3466 14.1062C16.7206 14.0264 17.1096 14.0556 17.4675 14.1901C18.3748 14.5286 19.3174 14.7635 20.2775 14.8901C20.7633 14.9586 21.2069 15.2033 21.524 15.5776C21.8412 15.9519 22.0097 16.4297 21.9975 16.9201Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>    
+                                        </span>
+                                        <span class="contact-element__text">234-55-55</span>
+                                    </a>
+                                    <div class="contact-element contact-element_address-mobile">
+                                        <span class="contact-element__icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>     
+                                        </span>
+                                        <span class="contact-element__text">Красноярск, ул. Красная площадь, 9А</span>
+                                    </div>
+                                    <button class="tertiary-button">
+                                        Маршрут на Яндексе
+                                        <span class="tertiary-button__icon">
+                                            <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.9375 11.8594L5.9375 7.85938L1.9375 3.85938" stroke="#6B452C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>    
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="search-bar main-menu__mobile-footer-search">
+                                    <input class="search-bar__input description-2" type="text" placeholder="Поиск по сайту..."> 
+                                    <button class="search-bar__button">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.4064 19.4749C15.9973 19.4749 19.719 15.7532 19.719 11.1622C19.719 6.5713 15.9973 2.84961 11.4064 2.84961C6.81544 2.84961 3.09375 6.5713 3.09375 11.1622C3.09375 15.7532 6.81544 19.4749 11.4064 19.4749Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M20.9075 21.1498L17.0938 17.2305" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>    
+                                    </button>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="header__bottom-buttons">
+                            <button class="header-main-button header-main-button_search">
+                                <span class="header-main-button__icon">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="18" cy="18" r="17.5" stroke="#E7E7E7"></circle>
+                                        <circle class="header-main-button__icon-progress-circle" cx="18" cy="18" r="17.5" stroke="#BDA37E"/>
+                                        <path d="M17.4064 25.4749C21.9973 25.4749 25.719 21.7532 25.719 17.1622C25.719 12.5713 21.9973 8.84961 17.4064 8.84961C12.8154 8.84961 9.09375 12.5713 9.09375 17.1622C9.09375 21.7532 12.8154 25.4749 17.4064 25.4749Z" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M26.9075 27.1498L23.0938 23.2305" stroke="#BDA37E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>         
+                                </span>
+                                <span class="header-main-button__text header-main-button__text_search">Поиск</span>
+                            </button>
+                            <button class="primary-button header__primary-button header__primary-button_desktop">Записаться</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="header__bottom">
-
-                </div>
-               
             </div>
         </div>
     </header>
     <main class="main">
+        <section class="hero">
+            <div class="hero__slider">
+                <div class="swiper-wrapper hero__slider-wrapper">
+                    <div class="swiper-slide hero__slide">
+                        <div class="hero__slide-container">
+                            <div class="hero__slide-content hero__slide-content_line-1">
+                                <h3 class="hero__title h1">Женское здоровье</h3>
+                                <p class="hero__text description-1">
+                                    Врачи-эксперты помогают женщинам следить за своим здоровьем, вовремя диагностировать и лечить заболевания репродуктивной системы
+                                </p>
+                                <a href="" class="hero__button primary-button">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="hero__img-wrapper">
+                            <img class="hero__img" src="./images/hero/slide1.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide hero__slide">
+                        <div class="hero__slide-container">
+                            <div class="hero__slide-content hero__slide-content_line-2">
+                                <h3 class="hero__title h1">мужское здоровье</h3>
+                                <p class="hero__text description-1">
+                                    Современные эффективные методы лечения.
+                                    Обследования с деликатным подходом. 
+                                    Большой клинический опыт врачей, персональная ответственность
+                                </p>
+                                <a href="" class="hero__button primary-button">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="hero__img-wrapper">
+                            <img class="hero__img" src="./images/hero/slide2.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide hero__slide">
+                        <div class="hero__slide-container">
+                            <div class="hero__slide-content hero__slide-content_line-3">
+                                <h3 class="hero__title h1">Девять месяцев мы рядом с вами</h3>
+                                <p class="hero__text description-1">
+                                    Опытная команда акушеров-гинекологов. Окружим вас и вашего малыша профессиональной заботой​. Ваш врач будет с Вами всегда на связи!​ Сопровождение после родов.
+                                </p>
+                                <a href="" class="hero__button primary-button">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="hero__img-wrapper">
+                            <img class="hero__img" src="./images/hero/slide3.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide hero__slide">
+                        <div class="hero__slide-container">
+                            <div class="hero__slide-content hero__slide-content_line-4">
+                                <h3 class="hero__title h1">ЭКСПЕРТНАЯ ДИАГНОСТИКА</h3>
+                                <p class="hero__text description-1">
+                                    Клиника оснащена новейшим оборудованием, а квалификация специалистов позволит выявить малейшие отклонения от нормы
+                                </p>
+                                <a href="" class="hero__button primary-button">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="hero__img-wrapper">
+                            <img class="hero__img" src="./images/hero/slide4.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide hero__slide">
+                        <div class="hero__slide-container">
+                            <div class="hero__slide-content hero__slide-content_line-5">
+                                <h3 class="hero__title h1">ЛУЧШАЯ КЛИНИКА</h3>
+                                <p class="hero__text description-1">
+                                    Семейная клиника «Арника» — победитель конкурса «Лучшие частные клиники РФ». В клинике работают специалисты с многолетним опытом, врачи высшей категории, кандидаты медицинских наук
+                                </p>
+                                <a href="" class="hero__button primary-button">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="hero__img-wrapper">
+                            <img class="hero__img" src="./images/hero/slide5.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__slider-pagination-box">
+                    <div class="container">
+                        <div class="hero__slider-pagination-box-inner">
+                            <div class="hero__slider-pagination-box-left">
+                                <div class="swiper-button-prev arrow-button">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="40" cy="40" r="39.5" fill="#FCFAF7" stroke="#E7E7E7"/>
+                                        <circle class="arrow-button__circle" cx="40" cy="40" r="39.5" fill="#FCFAF7" stroke="#BDA37E"/>
+                                        <path d="M25.6464 40.3536C25.4512 40.1583 25.4512 39.8417 25.6464 39.6464L28.8284 36.4645C29.0237 36.2692 29.3403 36.2692 29.5355 36.4645C29.7308 36.6597 29.7308 36.9763 29.5355 37.1716L26.7071 40L29.5355 42.8284C29.7308 43.0237 29.7308 43.3403 29.5355 43.5355C29.3403 43.7308 29.0237 43.7308 28.8284 43.5355L25.6464 40.3536ZM54 40.5H26V39.5H54V40.5Z" fill="#6B452C"/>
+                                    </svg>    
+                                </div>
+                                <div class="hero__slider-counter"></div>
+                                <div class="swiper-button-next arrow-button">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="40" cy="40" r="39.5" fill="#FCFAF7" stroke="#E7E7E7"/>
+                                        <circle class="arrow-button__circle" cx="40" cy="40" r="39.5" fill="#FCFAF7" stroke="#BDA37E"/>
+                                        <path d="M54.3536 40.3536C54.5488 40.1583 54.5488 39.8417 54.3536 39.6464L51.1716 36.4645C50.9763 36.2692 50.6597 36.2692 50.4645 36.4645C50.2692 36.6597 50.2692 36.9763 50.4645 37.1716L53.2929 40L50.4645 42.8284C50.2692 43.0237 50.2692 43.3403 50.4645 43.5355C50.6597 43.7308 50.9763 43.7308 51.1716 43.5355L54.3536 40.3536ZM26 40.5H54V39.5H26V40.5Z" fill="#6B452C"/>
+                                    </svg>    
+                                </div>
+                            </div>
+                            <div class="swiper-pagination">
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="directions">
+            <div class="container">
+                <h2 class="section-title h2">направления клиники</h2>
+                <div class="directions__inner">
+                    <div class="directions__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="direction-card">
+                                    <div class="direction-card__content">
+                                        <h4 class="direction-card__title h4">акушерствои гинекология</h4>
+                                        <img src="./images/services-icons/gynecology.svg" width="" height="" alt="" class="direction-card__icon">
+                                    </div>
+                                    <img src="" class="direction-card__background-img" alt="">
+                                    <button class="tertiary-button">
+                                        Записаться
+                                        <span class="tertiary-button__icon">
+                                            <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.9375 11.8594L5.9375 7.85938L1.9375 3.85938" stroke="#6B452C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>    
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div class="directions__slider-controls">
+                        <div class="swiper-button-prev arrow-button">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="40" cy="40" r="39.5" fill="#FCFAF7" stroke="#E7E7E7"/>
+                                <circle class="arrow-button__circle" cx="40" cy="40" r="39.5" fill="#FCFAF7" stroke="#BDA37E"/>
+                                <path d="M25.6464 40.3536C25.4512 40.1583 25.4512 39.8417 25.6464 39.6464L28.8284 36.4645C29.0237 36.2692 29.3403 36.2692 29.5355 36.4645C29.7308 36.6597 29.7308 36.9763 29.5355 37.1716L26.7071 40L29.5355 42.8284C29.7308 43.0237 29.7308 43.3403 29.5355 43.5355C29.3403 43.7308 29.0237 43.7308 28.8284 43.5355L25.6464 40.3536ZM54 40.5H26V39.5H54V40.5Z" fill="#6B452C"/>
+                            </svg>    
+                        </div>
+                        <div class="swiper-pagination">
+                        
+                        </div>
+                        <div class="swiper-button-next arrow-button">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="40" cy="40" r="39.5" fill="#FCFAF7" stroke="#E7E7E7"/>
+                                <circle class="arrow-button__circle" cx="40" cy="40" r="39.5" fill="#FCFAF7" stroke="#BDA37E"/>
+                                <path d="M54.3536 40.3536C54.5488 40.1583 54.5488 39.8417 54.3536 39.6464L51.1716 36.4645C50.9763 36.2692 50.6597 36.2692 50.4645 36.4645C50.2692 36.6597 50.2692 36.9763 50.4645 37.1716L53.2929 40L50.4645 42.8284C50.2692 43.0237 50.2692 43.3403 50.4645 43.5355C50.6597 43.7308 50.9763 43.7308 51.1716 43.5355L54.3536 40.3536ZM26 40.5H54V39.5H26V40.5Z" fill="#6B452C"/>
+                            </svg>    
+                        </div>
+                    </div>
+                    <button class="secondary-button">Смотреть все направления</button>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="main-div"></div>
+        <button class="secondary-button">Смотреть все направления</button>
+        <button class="primary-button">Записаться</button>
+        <button class="tertiary-button">
+            Записаться
+            <span class="tertiary-button__icon">
+                <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.9375 11.8594L5.9375 7.85938L1.9375 3.85938" stroke="#6B452C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>    
+            </span>
+        </button>
+        <button class="tertiary-button tertiary-button_download">
+            Записаться
+            <span class="tertiary-button__icon">
+                <img src="./images/header/download-icon.svg" width="" height="" alt="">
+            </span>
+        </button>
+
+        <div class="card-button">
+            <span class="card-button__icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="23.5" fill="#FCFAF7" stroke="#BDA37E"/>
+                    <g clip-path="url(#clip0_1297_181945)">
+                    <path d="M28.1236 21.8125C28.1405 21.5986 28.1499 21.3846 28.1499 21.1688C28.1499 21.1329 28.148 21.095 28.148 21.0591C28.1405 20.4779 28.0727 19.8986 27.9426 19.3307C27.8918 19.1074 27.8296 18.8859 27.7599 18.6663C27.7542 18.6493 27.7486 18.6303 27.7429 18.6114C27.6656 18.3748 27.5771 18.14 27.4772 17.9091C27.4678 17.8902 27.4584 17.8712 27.4489 17.8504C27.1361 17.1917 26.4502 16.7903 25.7209 16.8471L24.8108 16.9191C24.7561 16.9228 24.6996 16.9247 24.6449 16.9285C24.4282 16.9418 24.2115 16.9512 23.9929 16.9512C23.7743 16.9512 23.5576 16.9418 23.3409 16.9285C23.2863 16.9247 23.2298 16.9228 23.1751 16.9191L22.2649 16.8471C21.5357 16.7903 20.8497 17.1917 20.5369 17.8504C20.5275 17.8693 20.5181 17.8883 20.5087 17.9091C20.4088 18.14 20.3202 18.3748 20.243 18.6114C20.2373 18.6284 20.2317 18.6474 20.226 18.6663C20.1469 18.9143 20.079 19.1661 20.0244 19.4216C19.9075 19.9611 19.8454 20.5082 19.8378 21.0591C19.8378 21.095 19.8359 21.1329 19.8359 21.1688C19.8359 21.3828 19.8454 21.5986 19.8623 21.8125C19.8642 21.8446 19.8661 21.8768 19.8699 21.909C19.8699 21.926 19.8736 21.9431 19.8755 21.9601C19.9339 22.5583 20.0564 23.1527 20.2467 23.7339L20.6217 24.8791L21.0514 26.1891C21.1286 26.4276 21.2021 26.668 21.2719 26.9084C21.3058 27.0277 21.3397 27.1469 21.3717 27.2681C21.4132 27.4195 21.4546 27.5729 21.4923 27.7243C21.5244 27.8511 21.5545 27.978 21.5847 28.1048C21.6186 28.2525 21.6506 28.3982 21.6827 28.5459C21.7109 28.6765 21.7373 28.809 21.7618 28.9415C21.7901 29.0873 21.8164 29.233 21.8409 29.3788C21.8636 29.5113 21.8862 29.6438 21.9069 29.7782C21.9295 29.9278 21.9502 30.0754 21.9691 30.225C21.986 30.3556 22.0049 30.4862 22.0181 30.6168C22.0369 30.7739 22.0501 30.9329 22.0652 31.0901C22.0765 31.2131 22.0897 31.3362 22.0991 31.4592C22.1123 31.6371 22.1217 31.817 22.1311 31.9949C22.1368 32.099 22.1443 32.2013 22.1481 32.3054C22.1594 32.5817 22.1651 32.8562 22.1651 33.1326C22.1651 33.1402 22.1651 33.1459 22.1651 33.1534C22.1651 34.1094 22.9396 34.8874 23.8912 34.8874H24.0928C25.0444 34.8874 25.8189 34.1094 25.8189 33.1534C25.8189 33.1459 25.8189 33.1402 25.8189 33.1326C25.8189 32.8562 25.8246 32.5799 25.8359 32.3054C25.8397 32.2013 25.8472 32.099 25.8528 31.9949C25.8623 31.817 25.8717 31.6371 25.8849 31.4592C25.8943 31.3362 25.9075 31.2131 25.9188 31.0901C25.9339 30.9329 25.9471 30.7739 25.9659 30.6168C25.981 30.4862 25.9979 30.3556 26.0149 30.225C26.0337 30.0754 26.0545 29.9259 26.0771 29.7782C26.0978 29.6457 26.1204 29.5132 26.143 29.3788C26.1675 29.233 26.1939 29.0873 26.2222 28.9415C26.2467 28.809 26.275 28.6784 26.3013 28.5459C26.3334 28.3982 26.3654 28.2506 26.3993 28.1048C26.4295 27.978 26.4596 27.8511 26.4917 27.7243C26.5293 27.571 26.5708 27.4195 26.6123 27.2681C26.6443 27.1488 26.6782 27.0277 26.7121 26.9084C26.7819 26.668 26.8535 26.4276 26.9326 26.1891L27.3623 24.8791L27.7373 23.7339C27.8767 23.3117 27.9766 22.8801 28.0463 22.4447C28.0746 22.2668 28.0991 22.087 28.1141 21.9071C28.1179 21.8749 28.1179 21.8428 28.1217 21.8106L28.1236 21.8125ZM23.8949 33.6664C23.6142 33.6664 23.3843 33.4355 23.3843 33.1534C23.3843 33.0929 23.3805 33.0304 23.3805 32.9698C23.3805 32.7351 23.3749 32.5003 23.3673 32.2656C23.3617 32.1369 23.3541 32.0063 23.3466 31.8776C23.3372 31.7091 23.3296 31.5425 23.3164 31.3759C23.3051 31.232 23.2901 31.0882 23.2769 30.9443C23.2618 30.7929 23.2486 30.6395 23.2316 30.4881C23.2147 30.3385 23.1939 30.1909 23.1751 30.0413C23.1563 29.8956 23.1355 29.7498 23.1148 29.6041C23.0922 29.4545 23.0658 29.305 23.0413 29.1554C23.0168 29.0115 22.9904 28.8658 22.9641 28.7219C22.9358 28.5743 22.9056 28.4285 22.8755 28.2808C22.8434 28.1332 22.8114 27.9874 22.7775 27.8398C22.7455 27.6978 22.7115 27.5558 22.6757 27.4157C22.638 27.2624 22.5966 27.1091 22.5551 26.9557C22.5193 26.8232 22.4835 26.6907 22.444 26.5582C22.4289 26.509 22.4176 26.4579 22.4025 26.4087C22.3987 26.3954 22.3912 26.3841 22.3874 26.3708C22.3309 26.1834 22.2762 25.9941 22.2141 25.8086L21.4094 23.3534C20.8761 21.7273 20.9553 19.9668 21.6318 18.3975C21.6657 18.3161 21.7185 18.2479 21.7844 18.193C21.8862 18.1079 22.0181 18.0624 22.1556 18.0681C22.1632 18.0681 22.1707 18.0681 22.1783 18.0681L22.9414 18.1287L23.0884 18.14C23.3918 18.1647 23.6971 18.176 24.0024 18.176C24.3076 18.176 24.6129 18.1647 24.9163 18.14L25.0633 18.1287L25.8265 18.0681C25.8265 18.0681 25.8415 18.0681 25.8491 18.0681C25.9866 18.0624 26.1185 18.1079 26.2203 18.193C26.2844 18.2479 26.3371 18.3161 26.3729 18.3975C27.0494 19.9687 27.1286 21.7292 26.5953 23.3534L25.7907 25.8086C25.7285 25.996 25.6738 26.1834 25.6173 26.3708C25.6116 26.3841 25.606 26.3954 25.6022 26.4087C25.5871 26.4579 25.5758 26.509 25.5608 26.5582C25.5231 26.6907 25.4854 26.8232 25.4496 26.9557C25.4081 27.1091 25.3667 27.2624 25.329 27.4157C25.2932 27.5577 25.2593 27.6978 25.2272 27.8398C25.1933 27.9855 25.1613 28.1332 25.1292 28.2808C25.0991 28.4285 25.0689 28.5743 25.0407 28.7219C25.0124 28.8658 24.9879 29.0097 24.9634 29.1554C24.937 29.305 24.9125 29.4545 24.8899 29.6041C24.8673 29.7498 24.8485 29.8956 24.8296 30.0413C24.8089 30.1909 24.79 30.3385 24.7731 30.4881C24.7561 30.6395 24.7429 30.791 24.7279 30.9443C24.7147 31.0882 24.6996 31.232 24.6883 31.3759C24.6751 31.5425 24.6676 31.711 24.6581 31.8776C24.6506 32.0063 24.6412 32.135 24.6374 32.2656C24.628 32.5003 24.6261 32.7351 24.6242 32.9698C24.6242 33.0304 24.6204 33.0929 24.6204 33.1534C24.6204 33.4355 24.3905 33.6664 24.1098 33.6664H23.9081H23.8949Z" fill="#BDA37E"/>
+                    <path d="M40.1921 15.6379C40.1939 15.5962 40.1977 15.5527 40.1996 15.511C40.1996 15.4618 40.1958 15.4107 40.194 15.3615C40.1921 15.3198 40.1921 15.2801 40.1883 15.2384C40.1826 15.1873 40.1732 15.1343 40.1657 15.0832C40.16 15.0454 40.1563 15.0075 40.1487 14.9696C40.1374 14.9147 40.1223 14.8598 40.1073 14.805C40.0978 14.7709 40.0922 14.7368 40.0809 14.7046C40.062 14.644 40.0375 14.5835 40.0149 14.5229C40.0055 14.4964 39.998 14.4699 39.9867 14.4434C39.9546 14.3677 39.9188 14.2938 39.8811 14.22C39.8755 14.2087 39.8717 14.1992 39.8661 14.1878C39.8208 14.1026 39.7718 14.0194 39.7172 13.938C39.3045 13.3114 38.4923 12.6185 36.9603 12.8836C36.9151 12.8911 36.8699 12.9025 36.8265 12.912C36.7624 12.9252 36.6984 12.9366 36.6362 12.9517C36.6117 12.9574 36.5891 12.965 36.5646 12.9706C36.4817 12.9915 36.4006 13.0142 36.3196 13.0388C36.0181 13.1315 35.7317 13.247 35.4697 13.3663C35.4603 13.3701 35.4509 13.3738 35.4415 13.3776C35.4302 13.3833 35.4189 13.389 35.4076 13.3947C35.1532 13.512 34.9233 13.6332 34.7292 13.7392C33.6946 14.3071 31.8573 15.0605 29.9748 15.6928C29.8976 15.7193 29.8184 15.7439 29.7412 15.7704C29.4133 15.2195 28.9554 14.7728 28.4202 14.4585C28.4108 14.4529 28.4013 14.4472 28.3919 14.4415C28.3335 14.4074 28.2732 14.3771 28.2148 14.3468C28.2035 14.3412 28.1941 14.3355 28.1828 14.3298C28.1413 14.309 28.0961 14.2901 28.0546 14.2711C28.0263 14.2579 27.9962 14.2446 27.9679 14.2314C27.9302 14.2162 27.8926 14.203 27.8549 14.1878C27.8191 14.1746 27.7833 14.1594 27.7475 14.1481C27.7079 14.1348 27.6683 14.1235 27.6287 14.1121C27.5929 14.1008 27.5552 14.0894 27.5194 14.078C27.4893 14.0705 27.4573 14.0629 27.4271 14.0572C27.38 14.0459 27.3348 14.0345 27.2877 14.025C27.1482 13.9966 27.005 13.9777 26.8618 13.9664C26.8147 13.9626 26.7676 13.9607 26.7205 13.9588C26.6696 13.9569 26.6187 13.9531 26.5678 13.9531H21.429C21.3782 13.9531 21.3273 13.9569 21.2764 13.9588C21.2293 13.9607 21.1822 13.9626 21.1351 13.9664C20.9919 13.9777 20.8486 13.9966 20.7092 14.025C20.6621 14.0345 20.6169 14.0459 20.5698 14.0572C20.5396 14.0648 20.5076 14.0705 20.4774 14.078C20.4397 14.0875 20.4039 14.1008 20.3681 14.1121C20.3285 14.1235 20.289 14.1348 20.2494 14.1481C20.2136 14.1613 20.1778 14.1746 20.142 14.1878C20.1043 14.203 20.0647 14.2143 20.0289 14.2314C19.9988 14.2427 19.9705 14.2579 19.9422 14.2711C19.8989 14.2901 19.8556 14.309 19.8141 14.3298C19.8028 14.3355 19.7934 14.3412 19.7821 14.3468C19.7218 14.3771 19.6634 14.4074 19.6049 14.4415C19.5955 14.4472 19.5861 14.4529 19.5767 14.4585C19.0415 14.7709 18.5836 15.2176 18.2557 15.7704C18.1766 15.7458 18.0993 15.7193 18.022 15.6928C16.1395 15.0605 14.3022 14.3071 13.2677 13.7392C13.0774 13.6351 12.8512 13.5158 12.6025 13.4003C12.5855 13.3928 12.5705 13.3852 12.5554 13.3776C12.546 13.3738 12.5365 13.3701 12.5271 13.3663C12.2652 13.247 11.9787 13.1315 11.6772 13.0388C11.6151 13.0199 11.551 13.0028 11.4888 12.9858C11.4455 12.9744 11.404 12.9612 11.3607 12.9498C11.2985 12.9347 11.2344 12.9233 11.1703 12.9101C11.1251 12.9006 11.0818 12.8892 11.0365 12.8817C9.50641 12.6185 8.69235 13.3095 8.27966 13.9361C8.22501 14.0175 8.17602 14.1008 8.13079 14.1859C8.12514 14.1973 8.12137 14.2068 8.11572 14.2181C8.07803 14.2919 8.04034 14.3658 8.01019 14.4415C7.99889 14.468 7.99135 14.4945 7.98193 14.521C7.95931 14.5816 7.93482 14.6422 7.91597 14.7027C7.90655 14.7368 7.89901 14.7709 7.88959 14.8031C7.87451 14.858 7.85944 14.9129 7.84813 14.9677C7.8406 15.0056 7.83683 15.0435 7.83117 15.0813C7.82364 15.1324 7.81421 15.1836 7.80856 15.2366C7.80479 15.2763 7.80479 15.318 7.80291 15.3596C7.80102 15.4088 7.79537 15.458 7.79725 15.5091C7.79725 15.5508 7.80102 15.5943 7.80479 15.636C7.80668 15.6852 7.80856 15.7344 7.81421 15.7817C7.81798 15.8253 7.8274 15.8688 7.83494 15.9124C7.84248 15.9578 7.84625 16.0013 7.85567 16.0468C7.85567 16.0505 7.85567 16.0524 7.85756 16.0562C7.85756 16.06 7.85756 16.0638 7.85756 16.0676C7.87263 16.1376 7.89336 16.2077 7.9122 16.2758C7.91786 16.2966 7.92163 16.3156 7.92728 16.3364C8.13645 17.0065 8.58305 17.6255 9.23506 18.1423C9.21621 18.2067 9.20114 18.2729 9.18983 18.3392C9.18606 18.3619 9.18229 18.3846 9.18041 18.4073C9.17287 18.4509 9.16722 18.4925 9.16345 18.5361C9.15968 18.5663 9.15968 18.5985 9.1578 18.6288C9.1578 18.6629 9.15403 18.697 9.15403 18.7329C9.15403 18.7689 9.15403 18.8068 9.15403 18.8427C9.15403 18.8711 9.15779 18.8976 9.15968 18.926C9.16345 18.9696 9.16722 19.0112 9.17099 19.0547C9.17287 19.0718 9.17664 19.0907 9.17852 19.1077C9.22187 19.3955 9.3142 19.6832 9.45553 19.9615C9.46118 19.9728 9.46684 19.9842 9.47249 19.9956C9.49699 20.041 9.52149 20.0864 9.54787 20.1319C9.5554 20.1451 9.56294 20.1565 9.57048 20.1697C9.61005 20.2341 9.65151 20.2984 9.69485 20.3609C9.71935 20.3969 9.74573 20.4328 9.77211 20.4688C9.78907 20.4915 9.80603 20.5123 9.82299 20.5351C9.85879 20.5805 9.8946 20.6259 9.93417 20.6695C9.94548 20.6808 9.9549 20.6941 9.96621 20.7054C10.0755 20.8304 10.1961 20.9477 10.3242 21.0613C10.328 21.0651 10.3318 21.067 10.3337 21.0708C10.4675 21.1881 10.6126 21.2979 10.7652 21.4002C10.9744 21.5402 11.1986 21.6671 11.436 21.775C11.9015 21.987 12.3971 22.1138 12.8814 22.1593C12.8965 22.1612 12.9115 22.1668 12.9266 22.1668C12.9511 22.1687 12.9737 22.1668 12.9963 22.1706C13.0302 22.1725 13.0623 22.1725 13.0962 22.1744C13.149 22.1763 13.2017 22.1801 13.2526 22.1801C13.2809 22.1801 13.3073 22.1801 13.3336 22.1782C13.3393 22.1782 13.3449 22.1782 13.3506 22.1782C14.0214 22.1612 14.6113 21.9719 15.0635 21.6425C15.0692 21.6387 15.0748 21.6349 15.0805 21.6311C15.1521 21.5781 15.2199 21.5213 15.284 21.4626C15.2934 21.4532 15.3028 21.4437 15.3123 21.4342C15.3688 21.3812 15.4216 21.3244 15.4706 21.2658C15.4781 21.2563 15.4856 21.2487 15.4932 21.2393C15.544 21.1749 15.593 21.1086 15.6364 21.0405C15.6477 21.0235 15.6571 21.0064 15.6665 20.9913C15.7099 20.9193 15.7494 20.8474 15.7852 20.7717C15.8342 20.6676 15.87 20.5597 15.9002 20.4499C15.9303 20.342 15.9548 20.2322 15.968 20.1205C16.0133 19.7457 15.9624 19.3519 15.8154 18.9563C15.4837 18.0647 14.7111 17.2886 13.6954 16.8267C12.8682 16.45 11.975 16.3307 11.1816 16.4878C11.0968 16.5049 11.0139 16.5257 10.9329 16.5484C10.5259 16.6639 10.1697 16.8513 9.88518 17.1049C9.86445 17.0879 9.8456 17.069 9.82676 17.0519C9.79096 17.0198 9.75515 16.9895 9.72123 16.9573C9.70427 16.9403 9.68731 16.9213 9.67035 16.9043C9.63643 16.8702 9.6044 16.8361 9.57236 16.8021C9.55164 16.7794 9.53468 16.7566 9.51583 16.7339C9.48945 16.7036 9.46307 16.6733 9.44046 16.6431C9.41973 16.6166 9.40277 16.5919 9.38581 16.5654C9.36508 16.537 9.34435 16.5087 9.32551 16.4803C9.30666 16.4519 9.29159 16.4235 9.27463 16.397C9.25767 16.3705 9.24071 16.3421 9.22563 16.3156C9.21056 16.2872 9.19737 16.2588 9.18418 16.2285C9.17099 16.202 9.15591 16.1736 9.1446 16.1471C9.13141 16.1187 9.12199 16.0884 9.11068 16.06C9.10126 16.0335 9.08996 16.0051 9.08053 15.9786C9.07111 15.9483 9.06357 15.9199 9.05604 15.8896C9.0485 15.8631 9.04096 15.8366 9.03531 15.8101C9.02966 15.778 9.024 15.7477 9.02023 15.7155C9.01646 15.6966 9.0127 15.6757 9.01081 15.6568C9.00704 15.6246 9.00704 15.5924 9.00516 15.5584C9.00516 15.5394 9.00327 15.5205 9.00327 15.5035C9.00327 15.4694 9.00516 15.4353 9.00893 15.4012C9.00893 15.3842 9.00893 15.3672 9.01081 15.352C9.01458 15.3142 9.02212 15.2782 9.02777 15.2403C9.02966 15.2271 9.03154 15.2138 9.03342 15.2006C9.04285 15.1589 9.05415 15.1173 9.06546 15.0738C9.06734 15.0662 9.06923 15.0586 9.07111 15.051C9.08619 15.0018 9.10503 14.9545 9.12388 14.9072C9.12388 14.9072 9.12388 14.9053 9.12388 14.9034C9.16533 14.805 9.2181 14.7084 9.28217 14.6119C9.60063 14.1273 10.0906 13.9607 10.8198 14.0856C11.159 14.1443 11.5058 14.2617 11.811 14.3885C11.8977 14.4245 11.9806 14.4623 12.0598 14.4983C12.1389 14.5343 12.2124 14.5702 12.2821 14.6043C12.3858 14.6554 12.4762 14.7027 12.5497 14.7425C12.5987 14.769 12.6402 14.7917 12.6741 14.8106C12.6779 14.8125 12.6835 14.8163 12.6873 14.8182C13.8405 15.4486 15.6552 16.1963 17.5924 16.8399C17.647 16.8589 17.7036 16.8778 17.7582 16.8967L16.7651 19.5375C16.4919 20.2663 16.4504 21.05 16.6502 21.8034C16.6558 21.8261 16.6634 21.8488 16.6728 21.8715L19.5597 29.1596C20.1533 30.6588 20.4586 32.2395 20.468 33.8542L20.4774 35.5011C20.485 36.8092 21.1841 37.998 22.2563 38.6284C22.5032 38.7741 22.7707 38.8896 23.0534 38.971C23.0986 38.9842 23.1439 38.9937 23.1891 39.0051C23.4454 39.0675 23.7092 39.1054 23.9749 39.1111H24.0013C24.267 39.1054 24.5308 39.0694 24.7871 39.0051C24.8323 38.9937 24.8775 38.9842 24.9227 38.971C25.2054 38.8896 25.473 38.7741 25.7198 38.6284C26.7921 37.9961 27.4931 36.8092 27.4987 35.5011L27.5081 33.8542C27.5176 32.2395 27.8228 30.6588 28.4164 29.1596L31.3033 21.8715C31.3127 21.8488 31.3203 21.8261 31.3259 21.8034C31.5257 21.05 31.4861 20.2663 31.211 19.5375L30.2179 16.8967C30.2726 16.8778 30.3291 16.8589 30.3837 16.8399C32.3209 16.1963 34.1356 15.4486 35.2888 14.8182C35.2926 14.8163 35.2983 14.8125 35.302 14.8106C35.336 14.7917 35.3774 14.769 35.4264 14.7425C35.4999 14.7027 35.5903 14.6554 35.694 14.6043C35.7618 14.5702 35.8372 14.5343 35.9163 14.4983C35.9955 14.4623 36.0784 14.4245 36.1651 14.3885C36.4704 14.2617 36.8152 14.1443 37.1563 14.0856C37.8856 13.9588 38.3755 14.1273 38.694 14.6119C38.758 14.7084 38.8108 14.805 38.8523 14.9034C38.8523 14.9034 38.8523 14.9053 38.8523 14.9072C38.873 14.9545 38.8899 15.0037 38.905 15.051C38.9069 15.0586 38.9088 15.0662 38.9107 15.0738C38.9239 15.1154 38.9352 15.157 38.9427 15.2006C38.9446 15.2138 38.9465 15.2271 38.9484 15.2403C38.9559 15.2782 38.9615 15.3142 38.9653 15.352C38.9653 15.3691 38.9653 15.3861 38.9672 15.4012C38.9691 15.4353 38.9729 15.4694 38.9729 15.5035C38.9729 15.5224 38.971 15.5413 38.971 15.5584C38.971 15.5905 38.9691 15.6227 38.9653 15.6568C38.9634 15.6757 38.9597 15.6966 38.9559 15.7155C38.9521 15.7477 38.9465 15.778 38.9408 15.8101C38.9352 15.8366 38.9276 15.8631 38.9201 15.8896C38.9126 15.9199 38.905 15.9483 38.8956 15.9786C38.8862 16.0051 38.8749 16.0335 38.8654 16.06C38.8541 16.0884 38.8447 16.1187 38.8315 16.1471C38.8202 16.1736 38.8051 16.202 38.792 16.2285C38.7788 16.2569 38.7656 16.2853 38.7505 16.3156C38.7354 16.3421 38.7185 16.3705 38.7015 16.397C38.6845 16.4254 38.6695 16.4538 38.6506 16.4803C38.6318 16.5087 38.611 16.537 38.5903 16.5654C38.5715 16.5919 38.5545 16.6166 38.5357 16.6431C38.5112 16.6733 38.4848 16.7036 38.4603 16.7339C38.4415 16.7566 38.4245 16.7794 38.4038 16.8021C38.3736 16.8361 38.3397 16.8702 38.3058 16.9043C38.2888 16.9213 38.2737 16.9403 38.2549 16.9573C38.221 16.9895 38.1852 17.0217 38.1494 17.0519C38.1305 17.069 38.1117 17.0879 38.091 17.1049C37.8064 16.8513 37.4484 16.6639 37.0432 16.5484C36.9622 16.5257 36.8793 16.5049 36.7945 16.4878C36.0011 16.3288 35.1079 16.45 34.2807 16.8267C33.2631 17.2886 32.4905 18.0647 32.1607 18.9563C32.0137 19.3519 31.9629 19.7457 32.0081 20.1205C32.0137 20.1621 32.0232 20.2038 32.0307 20.2473C32.0364 20.2795 32.0401 20.3117 32.0477 20.3439C32.0533 20.3685 32.0609 20.3931 32.0684 20.4158C32.1004 20.537 32.14 20.6562 32.1928 20.7717C32.2286 20.8474 32.2681 20.9212 32.3115 20.9913C32.3209 21.0083 32.3322 21.0254 32.3416 21.0405C32.3869 21.1086 32.434 21.1768 32.4848 21.2393C32.4924 21.2487 32.4999 21.2563 32.5075 21.2658C32.5565 21.3244 32.6092 21.3812 32.6657 21.4342C32.6752 21.4437 32.6846 21.4532 32.694 21.4626C32.7581 21.5232 32.8259 21.5781 32.8975 21.6311C32.9032 21.6349 32.9088 21.6387 32.9145 21.6425C33.3667 21.9719 33.9566 22.1612 34.6274 22.1782C34.6331 22.1782 34.6387 22.1782 34.6444 22.1782C34.6726 22.1782 34.699 22.1801 34.7254 22.1801C34.7763 22.1801 34.829 22.1763 34.8818 22.1744C34.9157 22.1744 34.9478 22.1725 34.9817 22.1706C35.0062 22.1706 35.0288 22.1706 35.0514 22.1668C35.0665 22.1668 35.0816 22.1612 35.0966 22.1593C35.5809 22.1138 36.0746 21.987 36.542 21.775C36.7794 21.6671 37.0055 21.5402 37.2128 21.4002C37.3655 21.2979 37.5087 21.1863 37.6444 21.0689C37.6481 21.0651 37.6519 21.0632 37.6538 21.0594C37.7819 20.9458 37.9025 20.8285 38.0118 20.7035C38.0231 20.6922 38.0325 20.6789 38.0438 20.6676C38.0815 20.624 38.1192 20.5786 38.155 20.5332C38.172 20.5105 38.1889 20.4896 38.2059 20.4669C38.2323 20.431 38.2587 20.395 38.2832 20.359C38.3265 20.2965 38.368 20.2322 38.4075 20.1678C38.4151 20.1546 38.4245 20.1413 38.432 20.13C38.4584 20.0845 38.4829 20.0391 38.5074 19.9937C38.5131 19.9823 38.5187 19.971 38.5244 19.9596C38.6657 19.6813 38.758 19.3936 38.8014 19.1058C38.8033 19.0888 38.807 19.0699 38.8089 19.0528C38.8146 19.0093 38.8183 18.9677 38.8202 18.9241C38.8221 18.8957 38.824 18.8692 38.8259 18.8408C38.8259 18.8049 38.8278 18.767 38.8259 18.731C38.8259 18.697 38.8259 18.6629 38.8221 18.6269C38.8221 18.5966 38.8183 18.5645 38.8164 18.5342C38.8127 18.4906 38.807 18.4471 38.7995 18.4054C38.7957 18.3827 38.7938 18.36 38.7901 18.3373C38.7769 18.271 38.7637 18.2048 38.7448 18.1404C39.3968 17.6236 39.8435 17.0046 40.0526 16.3345C40.0583 16.3156 40.062 16.2947 40.0677 16.2739C40.0884 16.2039 40.1073 16.1357 40.1223 16.0657C40.1223 16.0619 40.1223 16.0581 40.1223 16.0543C40.1223 16.0505 40.1223 16.0487 40.1242 16.0449C40.1336 15.9994 40.1374 15.9559 40.145 15.9105C40.1525 15.8669 40.16 15.8234 40.1657 15.7798C40.1713 15.7306 40.1713 15.6814 40.1751 15.6341L40.1921 15.6379ZM26.564 15.176C27.591 15.176 28.5238 15.8234 28.8856 16.7888L30.0803 19.9672C30.2594 20.4442 30.2895 20.9572 30.167 21.4513C30.167 21.4513 30.167 21.4532 30.167 21.4551L27.2952 28.7071C26.6451 30.3503 26.3097 32.0786 26.3002 33.8466L26.2908 35.4936C26.2852 36.565 25.5879 37.5134 24.5948 37.7973C24.5572 37.8087 24.5176 37.8144 24.4799 37.8219C24.3216 37.8598 24.1595 37.8844 23.9937 37.8882C23.8298 37.8844 23.6677 37.8579 23.5075 37.8219C23.4699 37.8125 23.4303 37.8068 23.3926 37.7973C22.3995 37.5115 21.7023 36.565 21.6966 35.4936L21.6872 33.8466C21.6778 32.0786 21.3424 30.3503 20.6922 28.7071L17.8204 21.4551C17.8204 21.4551 17.8204 21.4532 17.8204 21.4513C17.6979 20.9572 17.7262 20.4442 17.9071 19.9672L19.1018 16.7888C19.4636 15.8253 20.3983 15.176 21.4234 15.176H26.5622H26.564ZM11.4323 20.3874C11.3625 20.3401 11.2966 20.2909 11.2325 20.2398C11.2174 20.2284 11.2043 20.217 11.1892 20.2057C11.061 20.0997 10.9461 19.9861 10.8425 19.8687C10.833 19.8574 10.8236 19.8479 10.8161 19.8365C10.7124 19.7116 10.622 19.5791 10.5504 19.4447C10.5504 19.4428 10.5485 19.4409 10.5466 19.439C10.5108 19.369 10.4788 19.297 10.4524 19.227C10.4335 19.1759 10.4147 19.1172 10.3996 19.0566C10.3977 19.0472 10.394 19.0377 10.3921 19.0263C10.3864 18.9998 10.3808 18.9733 10.377 18.9449C10.3751 18.9317 10.3732 18.9184 10.3714 18.9052C10.3676 18.8806 10.3657 18.8541 10.3638 18.8295C10.3638 18.8124 10.3638 18.7935 10.3638 18.7765C10.3638 18.7538 10.3638 18.7329 10.3638 18.7102C10.3638 18.6705 10.3695 18.6288 10.377 18.591C10.3808 18.572 10.3864 18.5512 10.3902 18.5323C10.3958 18.5114 10.3977 18.4906 10.4053 18.4698C10.4166 18.43 10.4317 18.3903 10.4505 18.3505C10.475 18.2994 10.5033 18.2502 10.5372 18.2029C10.5447 18.1915 10.5541 18.1821 10.5617 18.1707C10.5899 18.1347 10.6182 18.1007 10.6521 18.0666C10.6616 18.0571 10.671 18.0477 10.6804 18.0401C10.7181 18.006 10.7577 17.9738 10.7991 17.9435C10.8048 17.9398 10.8123 17.9341 10.818 17.9303C11.0855 17.7505 11.4568 17.6482 11.8921 17.6482C11.9976 17.6482 12.1069 17.6539 12.2143 17.6672C12.2181 17.6672 12.2218 17.6672 12.2256 17.6672C12.431 17.6918 12.6364 17.7372 12.8399 17.8035C12.8663 17.811 12.8908 17.8205 12.9172 17.83C13.0039 17.8603 13.0905 17.8943 13.1772 17.9322C13.1848 17.936 13.1942 17.9379 13.2017 17.9417C13.9159 18.2654 14.4699 18.8049 14.6848 19.386C14.7677 19.6094 14.8355 19.9426 14.6885 20.2644C14.6621 20.3212 14.6301 20.3742 14.5924 20.4253C14.5849 20.4347 14.5773 20.4442 14.5698 20.4537C14.534 20.4991 14.4944 20.5426 14.4511 20.5824C14.4473 20.5843 14.4454 20.5881 14.4417 20.59C14.338 20.6808 14.2137 20.7584 14.0704 20.8171C14.0704 20.8171 14.0686 20.8171 14.0667 20.8171C13.9969 20.8455 13.9253 20.8701 13.8481 20.8909C13.8443 20.8909 13.8387 20.8928 13.8349 20.8947C13.7595 20.9156 13.6804 20.9307 13.5993 20.9421C13.5824 20.944 13.5654 20.9458 13.5466 20.9477C13.4863 20.9553 13.426 20.9591 13.3638 20.9629C13.3318 20.9629 13.3016 20.9648 13.2696 20.9648C13.2093 20.9648 13.1471 20.9648 13.083 20.9591C12.7156 20.9364 12.3217 20.8417 11.9392 20.6695C11.7602 20.5881 11.5924 20.4934 11.4379 20.3893L11.4323 20.3874ZM34.912 20.9591C34.8498 20.9629 34.7857 20.9648 34.7254 20.9648C34.6934 20.9648 34.6613 20.9648 34.6312 20.9629C34.569 20.961 34.5087 20.9553 34.4484 20.9477C34.4314 20.9458 34.4126 20.944 34.3956 20.9421C34.3146 20.9307 34.2355 20.9156 34.1601 20.8947C34.1563 20.8947 34.1507 20.8928 34.1469 20.8909C34.0696 20.8701 33.998 20.8455 33.9283 20.8171C33.9283 20.8171 33.9264 20.8171 33.9245 20.8171C33.7813 20.7565 33.6569 20.6808 33.5533 20.59C33.5495 20.5881 33.5477 20.5843 33.5439 20.5824C33.4987 20.5426 33.461 20.4991 33.4252 20.4537C33.4176 20.4442 33.4101 20.4347 33.4026 20.4253C33.3649 20.3742 33.3328 20.3212 33.3064 20.2644C33.1595 19.9426 33.2273 19.6094 33.3102 19.386C33.525 18.8049 34.0791 18.2654 34.7932 17.9417C34.8008 17.9379 34.8102 17.936 34.8177 17.9322C34.9025 17.8943 34.9911 17.8603 35.0778 17.83C35.1042 17.8205 35.1287 17.8129 35.1551 17.8035C35.3586 17.7372 35.564 17.6918 35.7694 17.6672C35.7731 17.6672 35.7769 17.6672 35.7807 17.6672C35.8881 17.6558 35.9955 17.6482 36.1029 17.6482C36.5363 17.6482 36.9075 17.7486 37.177 17.9303C37.1827 17.9341 37.1902 17.9398 37.1959 17.9435C37.2392 17.9738 37.2788 18.006 37.3146 18.0401C37.324 18.0496 37.3334 18.0571 37.3428 18.0666C37.3749 18.0988 37.405 18.1347 37.4333 18.1707C37.4408 18.1821 37.4503 18.1915 37.4578 18.2029C37.4898 18.2502 37.52 18.2975 37.5445 18.3505C37.5633 18.3903 37.5784 18.43 37.5897 18.4698C37.5954 18.4906 37.5991 18.5114 37.6048 18.5323C37.6085 18.5531 37.6161 18.572 37.618 18.591C37.6236 18.6307 37.6293 18.6705 37.6312 18.7102C37.6312 18.7329 37.6312 18.7556 37.6312 18.7765C37.6312 18.7935 37.6312 18.8105 37.6312 18.8295C37.6312 18.856 37.6255 18.8806 37.6236 18.9052C37.6236 18.9184 37.6199 18.9317 37.618 18.9449C37.6142 18.9733 37.6085 18.9998 37.6029 19.0263C37.601 19.0358 37.5991 19.0453 37.5954 19.0566C37.5803 19.1172 37.5614 19.1759 37.5426 19.227C37.5162 19.2989 37.4842 19.369 37.4484 19.4409C37.4484 19.4428 37.4465 19.4447 37.4446 19.4466C37.373 19.581 37.2844 19.7135 37.1789 19.8384C37.1695 19.8498 37.1601 19.8593 37.1525 19.8706C37.0508 19.9899 36.9339 20.1016 36.8058 20.2076C36.7907 20.2189 36.7775 20.2303 36.7624 20.2416C36.6984 20.2928 36.6324 20.342 36.5627 20.3893C36.4063 20.4953 36.2386 20.59 36.0614 20.6695C35.6789 20.8436 35.287 20.9364 34.9176 20.9591H34.912Z" fill="#BDA37E"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1297_181945">
+                    <rect width="33.7778" height="32" fill="white" transform="translate(7.10938 8)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+            </span>
+            <h5 class="card-button__title h5">Акушерство и гинекология</h5>
+            <div class="card-button__arrow">
+                <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32" cy="32" r="31.5" transform="matrix(-1 0 0 1 64.2188 0.363281)" fill="white" stroke="#E7E7E7"/>
+                    <path d="M43.7692 32.7168C43.9644 32.5216 43.9644 32.205 43.7692 32.0097L40.5872 28.8277C40.3919 28.6325 40.0754 28.6325 39.8801 28.8277C39.6848 29.023 39.6848 29.3396 39.8801 29.5349L42.7085 32.3633L39.8801 35.1917C39.6848 35.387 39.6848 35.7036 39.8801 35.8988C40.0754 36.0941 40.3919 36.0941 40.5872 35.8988L43.7692 32.7168ZM21.0156 32.8633H43.4156V31.8633H21.0156V32.8633Z" fill="#6B452C"/>
+                </svg>
+            </div>
+        </div>
+
+        <a href="" class="menu-card">
+            <img src="./images/services-icons/matka.svg" class="menu-card__icon">
+            <h5 class="menu-card__title">Акушерство и гинекология</h5>
+        </a>
     </main>
+    <script src="./js/main-menu.js"></script>
+    <script src="./js/lib/accordion/accordion.js"></script>
+    <script src="./js/lib/swiper/swiper.min.js"></script>
+    <script src="./js/sliders.js"></script>
 </body>
 </html>

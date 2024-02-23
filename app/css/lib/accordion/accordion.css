@@ -1,0 +1,17 @@
+.accordion-btn{
+  width: 100%;
+  text-align: left;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+}
+.accordion-btn:hover{
+  cursor: pointer;
+}
+.accordion-content{
+  transition: .3s ease-in-out;
+  max-height: 0px;
+  overflow-y: hidden;
+}

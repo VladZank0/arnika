@@ -19,7 +19,7 @@ module.exports = {
         dest: pathDest + '/css',
     },
     js: {
-        src: pathSrc + "/js/*.js",
+        src: pathSrc + "/js/**/*.js",
         watch: pathSrc + "/js/**/*.js",
         dest: pathDest + '/js',
     },
@@ -29,7 +29,7 @@ module.exports = {
         dest: pathDest + '/images',
     },
     font: {
-        src: pathSrc + "/font/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}",
+        src: pathSrc + "/font/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}",
         watch: pathSrc + "/font/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}",
         dest: pathDest + '/font',
     },
