@@ -1,14 +1,12 @@
 .hero{
     background-color: $light-beige;
-    .swiper{
-        transition: 1s;
-    }
+    
     .swiper-slide{
         opacity: 0;
-        transition: 1s;
+        transition: opacity 1s;
         &-active{
             opacity: 1;
-            transition: 1s;
+            transition: opacity 1s;
         }
     }
     @include mobile(){
@@ -23,20 +21,7 @@
         &-wrapper{
             display: flex;
         }
-        &-counter{
-            color: black;
-            bottom: 106.5px;
-            font-size: 18px;
-            color: $dark;
-            &-current{
-                font-family: 'AvenirNextCyr-Bold', sans-serif;
-                font-weight: bold;
-            }
-            &-total{
-                font-family: 'AvenirNextCyr-Regular', sans-serif;
-                font-weight: 400;
-            }
-        }
+        
         &-pagination-box{
             position: absolute;
             bottom: 5%;
@@ -98,13 +83,16 @@
             left: 40px;
             z-index: 3;
             row-gap: 32px;
-            max-width: 735px;
-            top: 15%;
+            max-width: 744px;
+            top: 19%;
+            @media (max-width:1800px){
+                top: 15%;
+            }
             @include laptop(){
                 max-width: 604px;
             }
             @include tablet(){
-                max-width: 354px;
+                max-width: 360px;
             }
             @include mobile(){
                 top: 40px;
@@ -112,79 +100,137 @@
                 right: 16px;
                 row-gap: 20px;
             }
-            &::after{
+            svg{
                 @include mobile(){
                     display: none;
                 }
             }
+           
             &_line-1{
-                &::after{
-                    content: "";
+                // &::after{
+                //     content: "";
+                //     position: absolute;
+                //     background: url(/images/hero/btn-line-1.webp);
+                //     background-repeat: no-repeat;
+                //     background-size: contain;
+                //     width: 1100px;
+                //     bottom: -50%;
+                //     left: -30%;
+                //     height: 500px;
+                //     object-fit: contain;
+                //     z-index: -1;
+
+                //     @include tablet(){
+                //         width: 200%;
+                //         height: 100%;
+                //     }
+                // }
+                svg{
                     position: absolute;
-                    background: url(/images/hero/btn-line-1.webp);
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    width: 1100px;
-                    bottom: -50%;
+                    bottom: -100%;
                     left: -30%;
-                    height: 500px;
-                    object-fit: contain;
-                    z-index: -1;
                     @include tablet(){
-                        width: 200%;
-                        height: 100%;
+                        width: 500px;
+                        height: 400px;
+                        left: -20%;
+                        bottom: -40%;
                     }
                 }
             }
             &_line-2{
-                &::after{
-                    content: url('/images/hero/btn-line-2.webp');
-                    position: absolute;
-                    left: -30%;
-                    bottom: 2%;  
-                    z-index: -1;
-                    width: 100%;
-                    height: auto;
+                // &::after{
+                //     content: url('/images/hero/btn-line-2.webp');
+                //     position: absolute;
+                //     left: -30%;
+                //     bottom: 2%;  
+                //     z-index: -1;
+                //     width: 100%;
+                //     height: auto;
                     
+                // }
+                svg{
+                    position: absolute;
+                    bottom: 0%;
+                    left: -30%;
+                    @include tablet(){
+                        width: 248px;
+                        height: 274px;
+                        left: -40%;
+                        bottom: 5%;
+                    }
                 }
             }
             &_line-3{
-                &::after{
-                    content: url('/images/hero/btn-line-3.webp');
+                // &::after{
+                //     content: url('/images/hero/btn-line-3.webp');
+                //     position: absolute;
+                //     left: 15%;
+                //     bottom: 8%;
+                //     z-index: -1;
+                //     width: 100%;
+                //     height: auto;
+                // }
+                svg{
                     position: absolute;
-                    left: 15%;
-                    bottom: 8%;
-                    z-index: -1;
-                    width: 100%;
-                    height: auto;
+                    bottom: 12%;
+                    left: 16%;
+                    @include tablet(){
+                        width: 498px;
+                        height: 289px;
+                        left: 1%;
+                        bottom: 10%;
+                    }
                 }
             }
             &_line-4{
-                &::after{
-                    content: url('/images/hero/btn-line-4.webp');
+                svg{
                     position: absolute;
-                    left: 20%;
-                    bottom: -67%;
-                    z-index: -1;
-                    width: 100%;
-                    height: auto;
+                    bottom: -57%;
+                    left: 20%;                             
+                    @include tablet(){
+                        width: 342px;
+                        height: 317px;
+                        left: 42%;
+                        bottom: -55%;
+                    }
                 }
+                // &::after{
+                //     content: url('/images/hero/btn-line-4.webp');
+                //     position: absolute;
+                //     left: 20%;
+                //     bottom: -67%;
+                //     z-index: -1;
+                //     width: 100%;
+                //     height: auto;
+                // }
+                
             }
             &_line-5{
-                &::after{
-                    content: url('/images/hero/btn-line-5.webp');
+                // &::after{
+                //     content: url('/images/hero/btn-line-5.webp');
+                //     position: absolute;
+                //     left: 4%;
+                //     bottom: -65%;
+                //     z-index: -1;
+                //     width: 100%;
+                //     height: auto;
+                // }
+                svg{
                     position: absolute;
-                    left: 4%;
-                    bottom: -65%;
-                    z-index: -1;
-                    width: 100%;
-                    height: auto;
+                    bottom: -57%;
+                    left: 4%;                           
+                    @include tablet(){
+                        width: 400px;
+                        left: 10%;
+                        bottom: -60%;
+                    }
                 }
             }
         }
     }
     &__text{
         max-width: 620px;
+        line-height: 35px;
     }
     &__img{
             height: 100%;   
@@ -241,6 +287,9 @@
     &__button{
         width: fit-content;
         position: relative;
-        
+        @include primary-button-large();
+        @include tablet(){
+
+        }
     }
 }

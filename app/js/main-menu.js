@@ -66,17 +66,6 @@ dropdown_btns.forEach(btn => {
         }
     })
 })
-    // Однократное закрытие менюшек при ресайзе с моба на десктоп
-// let close_mobile_dropdowns = function () {
-//     if(window.matchMedia('(min-width: 1100px)').matches){
-//         clear_dropdowns();
-//         document.querySelector('.main-menu-background').style.height = 0 + 'px';
-//         window.removeEventListener('resize', close_mobile_dropdowns, false);
-//         window.removeEventListener('resize', resizeHandler);
-//         page_background.classList.remove('main-menu-page-background_active');
-//     }
-// };
-// window.addEventListener("resize",  close_mobile_dropdowns, false);
 
     //  Обработка подпуктов в меню
 
@@ -116,28 +105,47 @@ function show_more(){
 
         tab_boxes.forEach(box => {
             let all_li = box.querySelectorAll('li');
+            let hidden_count = null;
+        
             all_li.forEach((li, li_index) => {
-                
                 if(li_index > 5 && li_index != all_li.length - 1){
                     li.style.display = "none";
+                    hidden_count += 1;
                 }
                 
             })
+           
+            const button = document.createElement('button');  
+            const li = document.createElement('li');  
+            button.textContent = 'Показать еще';  
+            button.classList.add('main-menu__show-more-btn');
+            li.classList.add('main-menu__show-more-btn-wrapper');
+            let list_reduce = ()=>{
+                all_li.forEach((li, li_index) => {
+                    if(li_index > 5 && li_index != all_li.length - 1){
+                        li.style.display = "none";
+                    }
+                })
+                button.textContent = 'Показать еще';  
+                button.removeEventListener('click', list_reduce);
+                button.addEventListener('click', list_expend);
+                button.classList.remove('main-menu__show-more-btn_active');
+            }
+            let list_expend = ()=>{
+                all_li.forEach((li) => {
+                    li.style.display = "flex";
+                })
+                button.textContent = 'Скрыть';  
+                button.removeEventListener('click', list_expend);
+                button.addEventListener('click', list_reduce);
+                button.classList.add('main-menu__show-more-btn_active');
+            }
+            if(hidden_count >= 1){
+                box.closest('ul').appendChild(li).appendChild(button);
+                button.addEventListener('click', list_expend);
+            }
         })
 
-
-        
-        // var countD = 10;
-        // btn.addEventListener("click", function() {
-        //     var box=document.getElementsByClassName('box');
-        //     countD += 10;
-        //     if (countD <= box.length){
-        //         for(let i=0;i<countD;i++){
-        //              box[i].style.display = "block";
-        //         }
-        //     }
-
-        // })   
     }else{
         tab_boxes.forEach(box => {
             let all_li = box.querySelectorAll('li');
@@ -148,9 +156,6 @@ function show_more(){
     }
 }
 window.addEventListener('load', ()=>{
-    show_more();
-})
-window.addEventListener('resize', ()=>{
     show_more();
 })
 

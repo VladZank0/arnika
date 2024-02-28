@@ -1,0 +1,117 @@
+.team-block{
+    margin-top: 148px;
+    @include laptop(){
+        margin-top: 120px;
+    }
+    @include tablet(){
+        margin-top: 100px;
+    }
+    @include mobile(){
+        margin-top: 81px;
+    }
+    &__slider{
+        overflow: hidden;
+        width: 100%;
+        z-index: 1;
+        &-controls{
+            @include tablet(){
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 40px;
+            }
+           
+        }
+        &-pagination{
+            margin-top: 60px;
+            justify-content: center;
+            height: 15px;
+            @include tablet(){
+                margin-top: 0;
+            }
+        }
+        &-button{
+            position: absolute;
+            top: 176px;
+            z-index: 3;
+            &_prev{
+                left: 0;
+                transform: translateX(-50%);
+            }
+            &_next{
+                right: 0;
+                transform: translateX(50%);
+            }
+            @include laptop(){
+                top: 146px;
+            }
+            @include tablet(){
+                position: static;
+                top: unset;
+                transform: none;
+            }
+        }
+    }
+    &__wrapper{
+        display: flex;
+        align-items: stretch;
+        
+    }
+    &__inner{
+        position: relative;
+    }
+    &__button{
+        margin: 0 auto;
+        margin-top: 40px;
+        @include tablet(){
+            margin-top: 21px;
+        }
+        @include mobile(){
+            margin-top: 28px;
+        }
+    }
+}
+.doctor-card{
+    display: flex;
+    flex-direction: column;
+    width: 344px;
+    flex-shrink: 0;
+    // border: 1px solid black;
+    @include laptop(){
+        width: 286px;
+    }
+    &__img{
+        height: 432px;
+        width: 100%;
+        border-radius: 12px;
+        object-fit: center;
+        margin-bottom: 24px;
+        @include laptop(){
+            height: 356px;
+        }
+    }
+    &__content{
+        max-width: 304px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-bottom: auto;
+    }
+    &__title{
+        margin-bottom: 8px;
+    }
+    &__experience{
+        padding: 16px 24px;
+        box-sizing: border-box;
+        background-color: rgba(252, 250, 247, 1);
+        border-radius: 50px;
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 24px;
+        line-height: 11px;
+        font-family: 'AvenirNextCyr-Regular', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: $dark;
+    }
+}

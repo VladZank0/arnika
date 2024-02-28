@@ -201,9 +201,7 @@
     }
     
 }
-
 .logo{
-    display: block;
     display: none;
     @include laptop(){
         display: block;
@@ -222,6 +220,7 @@
         object-fit: contain;
         
     }
+   
     &_desktop{
         display: block;
         max-width: 233px;
@@ -293,6 +292,41 @@
     @include mobile(){
         padding: 32px 16px;
         height: calc(100vh - 72px);
+    }
+    &__show-more-btn{
+        display: block;
+        column-gap: 11.5px;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        color: $brown;
+        font-family: 'AvenirNextCyr-Regualar', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto;
+        line-height: 24px;
+        transition: all .3s;
+        &-wrapper{
+            width: 100%;
+        }
+        &::after{
+            content: url('../images/main-page/show-more-btn-arrow.png');
+            position: absolute;
+            right: -18.5px;
+            top: 1px;
+            width: 7px;
+            height: 21px;
+            display: block;
+        }
+        &_active{
+            &::after{
+                content: url('../images/main-page/show-more-btn-arrow.png');
+                transform: rotate(90deg);
+                top: 3px;
+            }
+        }
     }
     &__mobile-buttons{
         display: none;
@@ -419,14 +453,12 @@
             color: $dark;
             margin-top: 24px;
             margin-bottom: 0;
-            transition-delay: .3s;
             &:first-child{
                 margin-top: 0;
             }
               
             &_active{
                 margin-bottom: 24px;
-                transition-delay: unset;
                 color: $brown;
                 .main-menu__dropdown-submenu-mobile-button-icon{
                     transform: rotate(-180deg);
@@ -546,7 +578,7 @@
             li{
                 white-space: nowrap;
                 @include mobile(){
-                    white-space: wrap;
+                    white-space: normal;
                 }
             }
             &-item{
@@ -582,7 +614,7 @@
                 }
                 li{
                     display: block;
-                    white-space: wrap;
+                    white-space: normal;
                     break-inside: avoid;
                     &:not(:last-child){
                         padding-bottom: 24px;
@@ -610,20 +642,29 @@
                         max-width: unset;
                     }
                 }
+                @include tablet(){
+                    gap: 20px;
+                }
+                @include mobile(){
+                    gap: 16px;
+                }
             }
             &_mega-box{
                 display: flex;
                 width: 100%;
                 flex-wrap: wrap;
-                column-gap: 28px;
-                row-gap: 28px;
+                gap: 28px;
                 flex-direction: row;
                 justify-content: flex-start;
                 @include tablet(){
                     height: 0;
                     min-height: 0;
-                    transition: .3s ease-in-out;
+                    // transition: .3s ease-in-out;
                     overflow: hidden;
+                    gap: 20px;
+                }
+                @include mobile(){
+                    gap: 16px;
                 }
                 li{
                     width: 300px;

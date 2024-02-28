@@ -1,0 +1,394 @@
+.footer{
+    padding: 80px 0;
+    box-sizing: border-box;
+    @include laptop(){
+        padding: 60px 0;
+    }
+    &__contact-element-text{
+        color: $brown;
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+        @include tablet(){
+            row-gap: 48px;
+        }
+        @include mobile(){
+            row-gap: 40px;
+        }
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 40px;
+        @include laptop(){
+            column-gap: 15px;
+        }
+        @include tablet(){
+            row-gap: 48px;
+            flex-direction: column;
+        }
+    }
+    &-default-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 20px;
+        min-width: 270px;
+        @include tablet(){
+            flex-direction: row;
+        }
+        @include mobile(){
+            flex-direction: column;
+            row-gap: 24px;
+        }
+        &__buttons{
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+        }
+        &__primary-button{
+            width: 100%;
+            height: 50px;
+            @include mobile(){
+                max-width: 247px;
+                margin: 0 auto;
+            }
+        }
+        &__tertiary-button{
+            width: 100%;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            height: 50px;
+            @include mobile(){
+                max-width: 247px;
+                margin: 0 auto;
+            }
+        }
+        &__about{
+            display: flex;
+            flex-direction: column;
+            row-gap: 51px;
+            max-width: 300px;
+            width: 100%;
+            @include laptop(){
+                row-gap: 39px;
+                max-width: 285px;
+            }
+            @include tablet(){
+                row-gap: 27px;
+                max-width: 333px;
+            }
+            @include mobile(){
+                row-gap: 24px;
+                max-width: unset;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        &__text{
+            @include mobile(){
+                text-align: center;
+            }
+        }
+    }
+    &-logo{
+        max-width: 209px;
+        max-height: 69px;
+        width: 100%;
+        display: block;
+        @include laptop(){
+            max-width: 209px;
+            max-height: 69px;
+        }
+        @include tablet(){
+            max-width: 209px;
+            max-height: 69px;
+        }
+        @include mobile(){
+            max-width: 209px;
+            max-height: 69px;
+        }
+    }
+    &-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        row-gap: 17px;
+        padding-top: 32px;
+        @include tablet(){
+            padding-top: 0;
+            row-gap: 40px;
+        }
+        @include mobile(){
+            row-gap: 24px;
+        }
+        &__group{
+            display: flex;
+            column-gap: 28px;
+            justify-content: space-between;
+            @include mobile(){
+                flex-direction: column;
+            }
+            &-item{ 
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                max-width: 165px;
+                width: 100%;
+                &:nth-child(3){
+                    max-width: 230px;
+                }
+                @include tablet(){
+                    row-gap: 32px;
+                    max-width: unset;
+                    &:nth-child(3){
+                        max-width: unset;
+                    }
+                }
+                @include mobile(){
+                    row-gap: 28px;
+                }
+                
+            }   
+        }
+        &__button{
+            position: relative;
+            cursor: revert !important;
+            white-space: nowrap;
+            &.accordion-btn_active{
+                @include mobile(){
+                    .footer-nav__button-icon{
+                        transform: rotate(-180deg) translateY(50%);
+                        transition: $transition;
+                    }
+                    & + .footer-nav__list{
+                        margin-bottom: 28px;
+                    }
+                }
+                
+            }
+            &-icon{
+                transition: $transition;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                display: none;
+                @include mobile(){
+                    display: inline-flex;
+                }
+            }
+        }
+        &__list{
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+            max-height: unset;
+            @include tablet(){
+                row-gap: 28px;
+            }
+            @include mobile(){
+                max-height: 0;
+            }
+            &-item{
+                a{
+                    display: inline;
+                    position: relative;
+                    transition: $transition;
+                    color: $dark;
+                    width: fit-content;
+                    background-image: linear-gradient(to left, $brown, $brown) 0 100%/0 1.5px no-repeat;
+                     
+                    &:hover{
+                        color: $brown;
+                        background-image: linear-gradient(to left, $brown, $brown) 0 100%/100% 1.5px no-repeat;
+                        @include tablet(){
+                            background-image: none;
+                        }
+                    }
+                    
+                    
+                }
+                
+            }
+        }
+        &__button{
+
+        }
+    }
+    &__bottom-text{
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    &-warning-text{
+        font-family: 'Avenir Next Cyr-Medium', sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 44px;
+        letter-spacing: 0.07em;
+        text-align: center;
+        color: $light-gray;
+        margin-bottom: 24px;
+        @include tablet(){
+            font-size: 32px;
+            line-height: 40px;
+           
+        }
+        @include mobile(){
+            font-size: 24px;
+            line-height: 28px;
+            // margin-bottom: 28px;
+        }
+    }
+    &-site-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        padding-top: 24px;
+        box-sizing: border-box;
+        border-top: 1px solid $gray;
+        @include mobile(){
+            row-gap: 20px;
+            justify-content: center;
+        }
+        &__copyright{
+            font-family: 'Avenir Next Cyr-Regular', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+        }
+        &__design{
+            font-family: 'Avenir Next Cyr-Regular', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            letter-spacing: 0em;
+            text-align: right;
+            color: $brown;
+            a{
+                font-family: 'Avenir Next Cyr-Bold', sans-serif;
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 27px;
+                letter-spacing: 0em;
+                color: $brown;
+            }
+        }
+    }
+    &__contacts{
+        padding: 32px;
+        box-sizing: border-box;
+        max-width: 330px;
+        background-color: $light-beige;
+        border-radius: 12px;
+        @include tablet(){
+            width: 100%;
+            max-width: unset;
+            padding: 48px;
+            
+        }
+        @include mobile(){
+            padding: 32px;
+        }
+        .contact-element__text{
+            white-space: normal;
+        }
+        &-title{
+            display: block;
+            margin-bottom: 20px;
+            @include laptop(){
+                margin-bottom: 24px;
+            }
+            @include tablet(){
+                margin-bottom: 32px;
+            }
+            @include mobile(){
+                margin-bottom: 20px;
+            }
+        }
+        &-content{
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+            
+            @include tablet(){
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 24px;
+                .contact-element{
+                    &:nth-child(1){
+                        order: 1;
+                    }
+                    &:nth-child(2){
+                        order: 2;
+                    }
+                    &:nth-child(3){
+                        order: 3;
+                    }
+                }
+            }
+            @include mobile(){
+                display: flex;
+                flex-direction: column;
+                row-gap: 24px;
+                .contact-element{
+                    &:nth-child(1){
+                        order: unset;
+                    }
+                    &:nth-child(2){
+                        order: unset;
+                    }
+                    &:nth-child(3){
+                        order: unset;
+                    }
+                }
+            }
+
+        }
+    }
+}
+.footer-2{
+    padding: 80px 0;
+    box-sizing: border-box;
+    @include laptop(){
+        padding: 60px 0;
+    }
+    &__middle{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 28px;
+    }
+    &__map{
+        
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+        @include tablet(){
+            row-gap: 48px;
+        }
+        @include mobile(){
+            row-gap: 40px;
+        }
+    }
+    &__contacts{
+        width: 50%;
+        padding: 48px;
+        box-sizing: border-box;
+        background-color: $light-beige;
+        border-radius: 12px;
+        @include mobile(){
+            padding: 40px 32px;
+        }
+        &-top{
+            column-gap: 28px;
+            justify-content: space-between;
+        }
+    }
+}
